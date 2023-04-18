@@ -1,0 +1,11 @@
+[user]
+	name = John Konecny
+	email = 24961694+jfkonecn@users.noreply.github.com
+[credential]
+	helper = manager
+	helper =
+	helper = /usr/local/bin/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[core]
+	editor = nvim
