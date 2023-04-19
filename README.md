@@ -12,6 +12,14 @@
     - stow
     - A [nerd font](https://www.nerdfonts.com/) or use one in the fonts folder
         - Set this font for your terminal
+    - [nvm](https://github.com/nvm-sh/nvm)
+        - have the latest node version installed
+
+    ```sh
+    nvm install --lts
+    nvm use --lts
+    ```
+
 2. Clone in your home directory
 3. Run the ubuntu.sh script
 4. Restart to get zsh to be your default shell
