@@ -256,10 +256,6 @@ require("lspconfig").pyright.setup({
 	on_attach = on_attach,
 })
 
-require("lspconfig").pyright.setup({
-	on_attach = on_attach,
-})
-
 require("lspconfig").clangd.setup({
 	on_attach = on_attach,
 })
@@ -274,4 +270,12 @@ require("lspconfig").rust_analyzer.setup({
 			},
 		},
 	},
+})
+
+require("lspconfig").docker_compose_language_service.setup({
+	on_attach = on_attach,
+})
+
+require("lspconfig").dockerls.setup({
+	on_attach = on_attach,
 })
