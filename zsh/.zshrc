@@ -117,6 +117,8 @@ export GCM_CREDENTIAL_STORE="plaintext"
 export PATH="$HOME/idea-IC-223.8836.41/bin:$PATH"
 export PATH="$HOME/.tmux/plugins/tmuxifier/bin:$PATH"
 export EDITOR="/usr/bin/nvim"
+# https://coderwall.com/p/pb1uzq/z-shell-colors
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 
 
 export NVM_DIR="$HOME/.nvm"
