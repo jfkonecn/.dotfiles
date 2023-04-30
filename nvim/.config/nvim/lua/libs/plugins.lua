@@ -34,6 +34,7 @@ Plug("gruvbox-community/gruvbox")
 
 -- is a parser generator tool and an incremental parsing library
 Plug("nvim-treesitter/nvim-treesitter", { ["do"] = ":TSUpdate" })
+Plug("nvim-treesitter/nvim-treesitter-context")
 
 -- git manager
 Plug("tpope/vim-fugitive")

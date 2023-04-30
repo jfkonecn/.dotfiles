@@ -3,6 +3,7 @@
 require("libs.plugins")
 require("libs.mason")
 require("libs.set")
+require("libs.tree-sitter")
 require("libs.lsps")
 require("libs.remaps")
 require("libs.autocmd")
