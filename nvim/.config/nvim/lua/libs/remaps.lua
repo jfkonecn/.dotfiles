@@ -28,4 +28,4 @@ vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 -- Copy selected text to clipboard in visual mode
-vim.api.nvim_set_keymap("v", "<leader>yy", '"+y', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<leader>y", '"+y', { noremap = true, silent = true })
