@@ -34,19 +34,19 @@ null_ls.setup({
 	sources = {
 		null_ls.builtins.formatting.stylua,
 		null_ls.builtins.diagnostics.eslint.with({
-			condition = function(utils)
-				return utils.root_has_file({ ".eslint", ".eslintrc.json" })
-			end,
+			--condition = function(utils)
+			--return utils.root_has_file({ ".eslint", ".eslintrc.json", ".eslintrc.js" })
+			--end,
 		}),
-		null_ls.builtins.formatting.eslint.with({
-			condition = function(utils)
-				return utils.root_has_file({ ".eslint", ".eslintrc.json" })
-			end,
-		}),
+		--null_ls.builtins.formatting.eslint.with({
+		----condition = function(utils)
+		----return utils.root_has_file({ ".eslint", ".eslintrc.json", ".eslintrc.js" })
+		----end,
+		--}),
 		null_ls.builtins.formatting.prettier.with({
-			condition = function(utils)
-				return utils.root_has_file({ ".prettierrc" })
-			end,
+			--condition = function(utils)
+			--return utils.root_has_file({ ".prettierrc", ".prettierrc.json" })
+			--end,
 		}),
 		null_ls.builtins.diagnostics.markdownlint,
 		null_ls.builtins.diagnostics.pylint,
