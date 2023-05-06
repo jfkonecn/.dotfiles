@@ -20,7 +20,7 @@ map("n", "<leader>ps", ":lua require('telescope.builtin').grep_string({ search =
 map("n", "<leader>fa", ":lua require('telescope.builtin').find_files({ hidden = true})<CR>")
 
 -- hide search results
-map("n", "<leader>hs", ":noh<CR>")
+map("n", "<leader>noh", ":noh<CR>")
 
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", builtin.find_files, {})

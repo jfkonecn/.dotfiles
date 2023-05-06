@@ -59,4 +59,6 @@ Plug("github/copilot.vim")
 
 Plug("christoomey/vim-tmux-navigator")
 
+Plug("ThePrimeagen/harpoon")
+
 vim.call("plug#end")
