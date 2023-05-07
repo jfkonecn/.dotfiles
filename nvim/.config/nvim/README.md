@@ -13,15 +13,16 @@
     - [vim-plug](https://github.com/junegunn/vim-plug)
     - [ripgrep](https://github.com/BurntSushi/ripgrep)
     - zig (for windows only)
+
 Note on windows you have to install visual studio with the c++ complier and
-then run a powershell instance through visual studio
-    - using [scoop...](https://scoop.sh/)
+then run a powershell instance through visual studio - using [scoop...](https://scoop.sh/)
 check if %USERPROFILE%\scoop\shims is in your path
 
     ```
     scoop install zig
     scoop install ripgrep
     ```
+
 check if %USERPROFILE%\scoop\apps\ripgrep\13.0.0 is in your path
 check if %USERPROFILE%\scoop\apps\zig\0.10.1 is in your path
 
@@ -183,6 +184,28 @@ Debug Plugins
     - typescript-language-server
     - pylint
     - pyright
+
+    ◍ pylint
+    ◍ markdownlint
+    ◍ pyright
+    ◍ rust-analyzer
+    ◍ prettier
+    ◍ eslint-lsp
+    ◍ html-lsp
+    ◍ css-lsp
+    ◍ lua-language-server
+    ◍ jdtls
+    ◍ csharpier
+    ◍ astro-language-server
+    ◍ cspell
+    ◍ docker-compose-language-service
+    ◍ dockerfile-language-server
+    ◍ ltex-ls
+    ◍ omnisharp
+    ◍ rustfmt
+    ◍ stylua
+    ◍ tailwindcss-language-server
+    ◍ typescript-language-server
 
 ## Modifying VimRc
 

@@ -208,6 +208,7 @@ require("lspconfig").tailwindcss.setup({
 		"svelte",
 		"vue",
 		"rust",
+		"astro",
 	},
 	init_options = {
 		userLanguages = {
@@ -278,5 +279,9 @@ require("lspconfig").docker_compose_language_service.setup({
 })
 
 require("lspconfig").dockerls.setup({
+	on_attach = on_attach,
+})
+
+require("lspconfig").astro.setup({
 	on_attach = on_attach,
 })
