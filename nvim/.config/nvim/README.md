@@ -152,6 +152,38 @@ Debug Plugins
     :noh
     ```
 
+## Git
+
+    Do merge
+    ```
+    :G mergetool
+    ```
+
+    See diffs
+    ```
+    :G difftool
+    ```
+
+    See previous git files in a different window
+    ```
+    :Gsplit HEAD~1
+    ```
+
+    See previous version of opened file in a different window
+    ```
+    :Gsplit HEAD~1:%
+    ```
+
+    See git diff
+    ```
+    :Gdiffsplit
+    ```
+
+    checkout current file into the buffer if you save it overrides
+    ```
+    :Gread
+    ```
+
 ## Spell Checking
 
     ```
