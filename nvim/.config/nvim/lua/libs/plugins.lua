@@ -53,13 +53,12 @@ Plug("jose-elias-alvarez/null-ls.nvim")
 -- comment out lines
 Plug("preservim/nerdcommenter")
 
--- don't need on 0.9.0 and beyond
-Plug("MunifTanjim/exrc.nvim")
-
 Plug("github/copilot.vim")
 
 Plug("christoomey/vim-tmux-navigator")
 
 Plug("ThePrimeagen/harpoon")
+
+Plug("stevearc/oil.nvim")
 
 vim.call("plug#end")
