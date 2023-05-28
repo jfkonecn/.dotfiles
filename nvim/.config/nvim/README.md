@@ -217,23 +217,26 @@ Debug Plugins
     - pylint
     - pyright
 
-    ◍ pylint
-    ◍ markdownlint
-    ◍ pyright
-    ◍ rust-analyzer
-    ◍ prettier
-    ◍ eslint-lsp
-    ◍ html-lsp
-    ◍ css-lsp
-    ◍ lua-language-server
-    ◍ jdtls
-    ◍ csharpier
     ◍ astro-language-server
-    ◍ cspell
+    ◍ rust-analyzer
+    ◍ pyright
     ◍ docker-compose-language-service
     ◍ dockerfile-language-server
+    ◍ lua-language-server
+    ◍ cpplint
+    ◍ clang-format
+    ◍ clangd
+    ◍ csharpier
+    ◍ cspell
+    ◍ css-lsp
+    ◍ eslint-lsp
+    ◍ html-lsp
+    ◍ jdtls
     ◍ ltex-ls
+    ◍ markdownlint
     ◍ omnisharp
+    ◍ prettier
+    ◍ pylint
     ◍ rustfmt
     ◍ stylua
     ◍ tailwindcss-language-server
