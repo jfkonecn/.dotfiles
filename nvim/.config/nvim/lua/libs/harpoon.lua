@@ -29,7 +29,7 @@ vim.api.nvim_set_keymap(
 local function set_harpoon_number_key(key)
 	vim.api.nvim_set_keymap(
 		"n",
-		tostring(key),
+		"<leader>" .. tostring(key),
 		string.format(':lua require("harpoon.ui").nav_file(%d)<CR>', key),
 		{ noremap = true, silent = true }
 	)
