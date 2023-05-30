@@ -7,7 +7,7 @@ vim.api.nvim_set_keymap(
 
 vim.api.nvim_set_keymap(
 	"n",
-	"<leader>hm",
+	"<leader>hh",
 	':lua require("harpoon.ui").toggle_quick_menu()<CR>',
 	{ noremap = true, silent = true }
 )
