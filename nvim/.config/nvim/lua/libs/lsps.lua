@@ -288,4 +288,5 @@ require("lspconfig").astro.setup({
 
 require("lspconfig").cmake.setup({
 	on_attach = on_attach,
+	filetypes = { "cmake", "CMakeLists.txt" },
 })
