@@ -285,3 +285,7 @@ require("lspconfig").dockerls.setup({
 require("lspconfig").astro.setup({
 	on_attach = on_attach,
 })
+
+require("lspconfig").cmake.setup({
+	on_attach = on_attach,
+})
