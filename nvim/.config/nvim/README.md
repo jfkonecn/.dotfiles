@@ -199,40 +199,23 @@ Debug Plugins
 
 ## Installed by Mason
 
-    - charpier
-    - css-lsp
-    - eslint-lsp
-    - html-lsp
-    - jdtls
-    - ltex-ls
-    - lua-language-server
-    - markdownlint
-    - omnisharp
-    - prettier
-    - rust-analyzer
-    - rustfmt
-    - stylua
-    - tailwindcss-language-server
-    - typescript-language-server
-    - pylint
-    - pyright
-
     ◍ astro-language-server
+    ◍ dockerfile-language-server
     ◍ rust-analyzer
     ◍ pyright
-    ◍ docker-compose-language-service
-    ◍ dockerfile-language-server
-    ◍ lua-language-server
-    ◍ cpplint
+    ◍ jdtls
+    ◍ cmake-language-server
     ◍ clang-format
     ◍ clangd
+    ◍ cpplint
     ◍ csharpier
     ◍ cspell
     ◍ css-lsp
+    ◍ docker-compose-language-service
     ◍ eslint-lsp
     ◍ html-lsp
-    ◍ jdtls
     ◍ ltex-ls
+    ◍ lua-language-server
     ◍ markdownlint
     ◍ omnisharp
     ◍ prettier
