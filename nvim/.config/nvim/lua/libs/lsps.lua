@@ -48,23 +48,12 @@ local lsp_flags = {
 	debounce_text_changes = 150,
 }
 
-local function is_win()
-	return package.config:sub(1, 1) == "\\"
-end
-
-local function get_path_separator()
-	if is_win() then
-		return "\\"
-	end
-	return "/"
-end
-
-local path_sep = get_path_separator()
-local lsps_path = vim.fn.stdpath("data") .. path_sep .. "mason" .. path_sep .. "packages" .. path_sep
+local utils = require("libs.utils")
+local lsps_path = utils.concat_paths(utils.mason_path, "packages")
 
 require("lspconfig").omnisharp.setup({
 	-- cmd = { "dotnet", "./lsps/omnisharp/OmniSharp.dll" },
-	cmd = { "dotnet", lsps_path .. "omnisharp" .. path_sep .. "OmniSharp.dll" },
+	cmd = { "dotnet", utils.concat_paths(lsps_path, "omnisharp", "libexec", "OmniSharp.dll") },
 
 	-- Enables support for reading code style, naming convention and analyzer
 	-- settings from .editorconfig.
@@ -248,6 +237,7 @@ require("lspconfig").html.setup({
 
 require("lspconfig").jdtls.setup({
 	on_attach = on_attach,
+	filetypes = { "java" },
 })
 
 require("lspconfig").ltex.setup({

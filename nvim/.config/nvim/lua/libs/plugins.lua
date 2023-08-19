@@ -61,4 +61,7 @@ Plug("ThePrimeagen/harpoon")
 
 Plug("stevearc/oil.nvim")
 
+Plug("mfussenegger/nvim-dap")
+Plug("rcarriga/nvim-dap-ui")
+
 vim.call("plug#end")
