@@ -2,6 +2,12 @@
 
 ## Installation
 
+### Install nvim
+
+[Install FUSE](https://github.com/AppImage/AppImageKit/wiki/FUSE)
+[Download latest nvim](https://github.com/neovim/neovim/releases)
+Place the appimage file in ~/bin make sure the file name is nvim
+
 ### clone to this location
 
 - %USERPROFILE%\AppData\Local\nvim (on windows)
@@ -263,3 +269,11 @@ Add .nvimrc.lua file
 :imap <leader>
 :verbose imap
 ```
+
+## Local lua repos scripts
+
+Neovim v0.9.0 onwards supports secure `.exrc`, `.nvimrc` and `.nvim.lua` file
+Add .nvim.lua file to your repo
+
+- `:help 'exrc'`
+- `:help exrc`

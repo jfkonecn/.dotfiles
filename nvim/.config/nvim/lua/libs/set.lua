@@ -18,5 +18,5 @@ vim.opt.showmode = true
 vim.opt.linebreak = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
---
+vim.opt.exrc = true
 vim.cmd("colorscheme gruvbox")
