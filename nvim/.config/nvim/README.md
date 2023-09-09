@@ -278,11 +278,12 @@ Add .nvim.lua file to your repo
 - `:help 'exrc'`
 - `:help exrc`
 
-Disable formatting
+[Disable formatting](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/SOURCES.md#disablequery)
 
 ```lua
 require("null-ls").disable({
   filetypes = { "typescript", "markdown", "javascript", "json" },
+  method = require("null-ls").methods.FORMATTING,
 })
 
 ```
