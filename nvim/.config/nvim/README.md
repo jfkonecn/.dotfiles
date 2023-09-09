@@ -277,3 +277,12 @@ Add .nvim.lua file to your repo
 
 - `:help 'exrc'`
 - `:help exrc`
+
+Disable formatting
+
+```lua
+require("null-ls").disable({
+  filetypes = { "typescript", "markdown", "javascript", "json" },
+})
+
+```
