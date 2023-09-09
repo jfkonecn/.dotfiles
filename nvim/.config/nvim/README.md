@@ -199,31 +199,33 @@ Debug Plugins
 
 ## Installed by Mason
 
-    ◍ astro-language-server
-    ◍ dockerfile-language-server
-    ◍ rust-analyzer
-    ◍ pyright
-    ◍ jdtls
-    ◍ cmake-language-server
-    ◍ clang-format
-    ◍ clangd
-    ◍ cpplint
-    ◍ csharpier
-    ◍ cspell
-    ◍ css-lsp
-    ◍ docker-compose-language-service
-    ◍ eslint-lsp
-    ◍ html-lsp
-    ◍ ltex-ls
-    ◍ lua-language-server
-    ◍ markdownlint
-    ◍ omnisharp
-    ◍ prettier
-    ◍ pylint
-    ◍ rustfmt
-    ◍ stylua
-    ◍ tailwindcss-language-server
-    ◍ typescript-language-server
+    ◍ prisma-language-server (keywords: prisma)
+    ◍ astro-language-server (keywords: astro)
+    ◍ clang-format (keywords: c, c#, c++, json, java, javascript)
+    ◍ clangd (keywords: c, c++)
+    ◍ cmake-language-server (keywords: cmake)
+    ◍ cpplint (keywords: c, c++)
+    ◍ csharpier (keywords: c#)
+    ◍ cspell (keywords: )
+    ◍ css-lsp (keywords: css, scss, less)
+    ◍ docker-compose-language-service (keywords: docker)
+    ◍ dockerfile-language-server (keywords: docker)
+    ◍ eslint-lsp (keywords: javascript, typescript)
+    ◍ html-lsp (keywords: html)
+    ◍ jdtls (keywords: java)
+    ◍ ltex-ls (keywords: text, markdown, latex)
+    ◍ lua-language-server (keywords: lua)
+    ◍ markdownlint (keywords: markdown)
+    ◍ netcoredbg (keywords: .net, c#, f#)
+    ◍ omnisharp (keywords: c#)
+    ◍ prettier (keywords: angular, css, flow, graphql, html, json, jsx, javascript, less, markdown, scss, typescript, vue, yaml)
+    ◍ pylint (keywords: python)
+    ◍ pyright (keywords: python)
+    ◍ rust-analyzer (keywords: rust)
+    ◍ rustfmt (keywords: rust)
+    ◍ stylua (keywords: lua, luau)
+    ◍ tailwindcss-language-server (keywords: css)
+    ◍ typescript-language-server (keywords: typescript, javascript)
 
 ## Modifying VimRc
 
