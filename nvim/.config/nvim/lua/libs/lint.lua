@@ -9,8 +9,6 @@
 --   astro = { 'eslint' }
 -- }
 --
---
--- vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 --   callback = function()
 --     require("lint").try_lint()
 --   end,
@@ -56,6 +54,7 @@ null_ls.setup({
 			filetypes = { "c", "cpp", "objc", "objcpp" },
 		}),
 		null_ls.builtins.diagnostics.cpplint,
+		null_ls.builtins.code_actions.eslint,
 	},
 	on_attach = function(client, bufnr)
 		if client.supports_method("textDocument/formatting") then

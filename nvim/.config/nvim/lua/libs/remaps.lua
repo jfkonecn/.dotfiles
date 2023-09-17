@@ -15,7 +15,7 @@ end
 vim.g.mapleader = " "
 
 -- do grep telescope search
-map("n", "<leader>ps", ":lua require('telescope.builtin').grep_string({ search = vim.fn.input(\"Grep For > \")})<CR>")
+map("n", "<leader>fw", ":lua require('telescope.builtin').grep_string({ search = vim.fn.input(\"Grep For > \")})<CR>")
 
 map("n", "<leader>fa", ":lua require('telescope.builtin').find_files({ hidden = true})<CR>")
 
