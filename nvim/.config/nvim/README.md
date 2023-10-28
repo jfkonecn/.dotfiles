@@ -287,3 +287,20 @@ require("null-ls").disable({
 })
 
 ```
+
+## DAP
+
+### C\#
+
+```lua
+local dap = require("dap")
+
+dap.configurations.cs = {
+	{
+		type = "coreclr",
+		name = "launch - netcoredbg",
+		request = "launch",
+		program = "${workspaceFolder}/CSharpPlayground.Console/bin/Debug/net6.0/CSharpPlayground.Console.dll",
+	},
+}
+```

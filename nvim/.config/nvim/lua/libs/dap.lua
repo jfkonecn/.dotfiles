@@ -3,7 +3,8 @@
 -- maybe try https://github.com/puremourning/vimspector ? it's more for vim
 -- :h dap-configuration
 
-local dap = require("dap")
+local dap, dapui = require("dap"), require("dapui")
+dapui.setup()
 local utils = require("libs.utils")
 local daps_path = utils.concat_paths(utils.mason_path, "packages")
 
@@ -16,13 +17,24 @@ dap.adapters.coreclr = {
 	args = { "--interpreter=vscode" },
 }
 
-dap.configurations.cs = {
-	{
-		type = "coreclr",
-		name = "launch - netcoredbg",
-		request = "launch",
-		program = function()
-			return vim.fn.input("Path to dll: ", vim.fn.getcwd() .. "/bin/Debug/", "file")
-		end,
-	},
-}
+dap.listeners.after.event_initialized["dapui_config"] = function()
+	dapui.open()
+end
+dap.listeners.before.event_terminated["dapui_config"] = function()
+	dapui.close()
+end
+dap.listeners.before.event_exited["dapui_config"] = function()
+	dapui.close()
+end
+
+--dap.configurations.cs = {
+--{
+--type = "coreclr",
+--name = "launch - netcoredbg",
+--request = "launch",
+--program = function()
+----return vim.fn.input("Path to dll: ", vim.fn.getcwd() .. "/bin/Debug/", "file")
+--return vim.fn.input("Path to dll: ", "${workspace}/bin/Debug/", "file")
+--end,
+--},
+--}
