@@ -2,6 +2,8 @@
 -- https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation
 -- maybe try https://github.com/puremourning/vimspector ? it's more for vim
 -- :h dap-configuration
+-- https://github.com/David-Kunz/vim
+-- https://www.youtube.com/watch?v=ga3Cas7vNCk
 
 local dap, dapui = require("dap"), require("dapui")
 dapui.setup()
