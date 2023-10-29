@@ -13,17 +13,13 @@ end
 
 local function runSingleTest(cmd)
 	local jobIsRunning = false
-	vim.fn.jobstart("VSTEST_HOST_DEBUG=1 " .. cmd, {
-		on_stdout = function(_, data, _)
+	vim.fn.jobstart("VSTEST_HOST_DEBUG=1 " .. cmd .. " -c Debug", {
+		on_stdout = function(_, _, _)
 			if jobIsRunning then
 				return
 			end
-			for key, value in pairs(data) do
-				print(key, value)
-			end
 			local pid = tonumber(io.popen("pgrep -n dotnet"):read("*n"))
 
-			print("pid", pid)
 			jobIsRunning = true
 			dap.run({
 				type = "coreclr", -- Replace with your debugger type (e.g., 'csharp', 'dotnet')
