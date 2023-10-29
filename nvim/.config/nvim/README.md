@@ -288,6 +288,16 @@ require("null-ls").disable({
 
 ```
 
+## Local Configs
+
+### Python
+
+#### Setup virtual environments
+
+```sh
+echo '{ "venvPath": ".", "venv": ".venv" }' > pyrightconfig.json
+```
+
 ## DAP
 
 ### C\#
