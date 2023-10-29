@@ -13,7 +13,7 @@ end
 
 local function runSingleTest(cmd)
 	local jobIsRunning = false
-	vim.fn.jobstart("VSTEST_HOST_DEBUG=1 " .. cmd .. " -c Debug", {
+	vim.fn.jobstart("VSTEST_HOST_DEBUG=1 " .. cmd, {
 		on_stdout = function(_, _, _)
 			if jobIsRunning then
 				return
