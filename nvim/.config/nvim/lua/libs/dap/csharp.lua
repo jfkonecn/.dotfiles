@@ -13,6 +13,7 @@ end
 
 -- example command
 -- dotnet test /home/jfkonecn/repos/csharp-playground/CSharpPlayground.Console.Tests/CSharpPlayground.Console.Tests.csproj --filter FullyQualifiedName=CSharpPlayground.Console.Tests.CodeWarsTests.ToWeirdCaseTest
+--
 
 local function runSingleTest(cmd)
 	-- example cmd
@@ -37,6 +38,55 @@ local function runSingleTest(cmd)
 	--local job_id = vim.fn.jobstart(
 	--"VSTEST_HOST_DEBUG=1 dotnet test /home/jfkonecn/repos/csharp-playground/CSharpPlayground.Console.Tests/CSharpPlayground.Console.Tests.csproj --filter FullyQualifiedName=CSharpPlayground.Console.Tests.CodeWarsTests.ToWeirdCaseTest",
 	--{
+	local jodIsRunning = false
+	local job_id = vim.fn.jobstart("VSTEST_HOST_DEBUG=1 " .. cmd, {
+		on_stdout = function(_, data, _)
+			print("stdout ", data)
+			for key, value in pairs(data) do
+				print(key, value)
+			end
+			if jodIsRunning then
+				return
+			end
+			local pid = tonumber(io.popen("pgrep -n dotnet"):read("*n"))
+			print("pid ", pid)
+			jodIsRunning = true
+			dap.run({
+				type = "coreclr", -- Replace with your debugger type (e.g., 'csharp', 'dotnet')
+				name = "Run Single .NET Test",
+				request = "attach",
+				processId = pid,
+				--processId = 3477286,
+				--processId = "${command:pickProcess}",
+				--program = "/home/jfkonecn/repos/csharp-playground/CSharpPlayground.Console.Tests/CSharpPlayground.Console.Tests.csproj",
+				--args = { "--filter", "FullyQualifiedName=CSharpPlayground.Console.Tests.CodeWarsTests.ToWeirdCaseTest" },
+				--cwd = "${workspaceFolder}",
+				----stopAtEntry = false,
+				--serverReadyAction = {
+				--action = "openExternally",
+				--pattern = "Now listening on",
+				--},
+				--console = "internalConsole",
+				--pipeTransport = {
+				--pipeProgram = "powershell",
+				--pipeArgs = { "-NoExit", "-Command" },
+				--debuggerPath = "${env:DOTNET_ROOT}/.dotnet/dotnet",
+				--},
+				--logging = {
+				--engineLogging = true,
+				--trace = true,
+				--traceResponse = true,
+				--},
+			})
+		end,
+		on_stderr = function(_, data, _)
+			print("stderr ", data)
+		end,
+		on_exit = function(_, exit_code, _)
+			print("exit code ", exit_code)
+		end,
+	})
+	local pid = vim.fn.jobpid(job_id)
 	----local job_id = vim.fn.jobstart("VSTEST_HOST_DEBUG=1 " .. cmd, {
 	--on_stdout = function(_, data, _)
 	--print("stdout ", data)
@@ -51,41 +101,16 @@ local function runSingleTest(cmd)
 	--)
 	--vim.fn.system("VSTEST_HOST_DEBUG=1 " .. cmd)
 	--vim.fn.jobstart("VSTEST_HOST_DEBUG=1 " .. cmd)
-	--print("job_id ", job_id)
-	--vim.api.nvim_command(":! VSTEST_HOST_DEBUG=1 " .. cmd .. " &")
-	vim.api.nvim_command(":!echo " .. cmd)
-	local pid = tonumber(io.popen("pgrep -n dotnet"):read("*n"))
+	print("job_id ", job_id)
+	--vim.api.nvim_command("!VSTEST_HOST_DEBUG=1 " .. cmd .. " &")
+	--vim.api.nvim_command("terminal VSTEST_HOST_DEBUG=1 " .. cmd .. " &")
+	--vim.api.nvim_command("!VSTEST_HOST_DEBUG=1 " .. cmd)
+	--vim.api.nvim_command("!ls")
+	local pid2 = tonumber(io.popen("pgrep -n dotnet"):read("*n"))
 	print("pid ", pid)
+	print("pid2 ", pid2)
 	--local pid = process:read("*n")
 	--print("pid ", pid)
-
-	dap.run({
-		type = "coreclr", -- Replace with your debugger type (e.g., 'csharp', 'dotnet')
-		name = "Run Single .NET Test",
-		request = "attach",
-		processId = pid,
-		--processId = 3477286,
-		--processId = "${command:pickProcess}",
-		--program = "/home/jfkonecn/repos/csharp-playground/CSharpPlayground.Console.Tests/CSharpPlayground.Console.Tests.csproj",
-		--args = { "--filter", "FullyQualifiedName=CSharpPlayground.Console.Tests.CodeWarsTests.ToWeirdCaseTest" },
-		--cwd = "${workspaceFolder}",
-		----stopAtEntry = false,
-		--serverReadyAction = {
-		--action = "openExternally",
-		--pattern = "Now listening on",
-		--},
-		--console = "internalConsole",
-		--pipeTransport = {
-		--pipeProgram = "powershell",
-		--pipeArgs = { "-NoExit", "-Command" },
-		--debuggerPath = "${env:DOTNET_ROOT}/.dotnet/dotnet",
-		--},
-		--logging = {
-		--engineLogging = true,
-		--trace = true,
-		--traceResponse = true,
-		--},
-	})
 end
 
 return {

@@ -23,6 +23,7 @@ dap.listeners.before.event_exited["dapui_config"] = function()
 	dapui.close()
 end
 
+require("dap").set_log_level("DEBUG")
 require("libs.dap.csharp").setup()
 
 local currentScriptPath = debug.getinfo(1, "S").source:sub(2)
