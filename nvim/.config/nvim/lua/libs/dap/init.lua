@@ -5,19 +5,13 @@
 -- https://github.com/David-Kunz/vim
 -- https://www.youtube.com/watch?v=ga3Cas7vNCk
 
-local dap, dapui = require("dap"), require("dapui")
+local dap = require("dap")
+local dapui = require("dapui")
 dapui.setup()
 local utils = require("libs.utils")
-local daps_path = utils.concat_paths(utils.mason_path, "packages")
 
 vim.api.nvim_set_keymap("n", "<F9>", ':lua require("dap").toggle_breakpoint()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<F5>", ':lua require("dap").continue()<CR>', { noremap = true, silent = true })
-
-dap.adapters.coreclr = {
-	type = "executable",
-	command = utils.concat_paths(daps_path, "netcoredbg", "netcoredbg"),
-	args = { "--interpreter=vscode" },
-}
 
 dap.listeners.after.event_initialized["dapui_config"] = function()
 	dapui.open()
@@ -28,6 +22,12 @@ end
 dap.listeners.before.event_exited["dapui_config"] = function()
 	dapui.close()
 end
+
+require("libs.dap.csharp").setup()
+
+local currentScriptPath = debug.getinfo(1, "S").source:sub(2)
+local currentScriptDir = vim.fn.fnamemodify(currentScriptPath, ":h")
+vim.cmd("source " .. utils.concat_paths(currentScriptDir, "_init.vim"))
 
 --dap.configurations.cs = {
 --{
