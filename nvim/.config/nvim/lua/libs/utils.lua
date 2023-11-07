@@ -1,4 +1,5 @@
-local function concat_paths(...)
+local M = {}
+function M.concat_paths(...)
 	local path_separator = package.config:sub(1, 1)
 	local args = { ... }
 
@@ -8,9 +9,6 @@ local function concat_paths(...)
 	return path
 end
 
-local mason_path = concat_paths(vim.fn.stdpath("data"), "mason")
+M.mason_path = M.concat_paths(vim.fn.stdpath("data"), "mason")
 
-return {
-	concat_paths = concat_paths,
-	mason_path = mason_path,
-}
+return M
