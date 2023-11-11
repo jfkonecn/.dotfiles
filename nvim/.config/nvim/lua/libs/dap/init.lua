@@ -4,6 +4,7 @@
 -- :h dap-configuration
 -- https://github.com/David-Kunz/vim
 -- https://www.youtube.com/watch?v=ga3Cas7vNCk
+-- Mason install location: ~/.local/share/nvim/mason/packages
 
 local dap = require("dap")
 local dapui = require("dapui")
@@ -25,19 +26,8 @@ end
 
 require("dap").set_log_level("DEBUG")
 require("libs.dap.csharp").setup()
+require("libs.dap.node").setup()
 
 local currentScriptPath = debug.getinfo(1, "S").source:sub(2)
 local currentScriptDir = vim.fn.fnamemodify(currentScriptPath, ":h")
 vim.cmd("source " .. utils.concat_paths(currentScriptDir, "_init.vim"))
-
---dap.configurations.cs = {
---{
---type = "coreclr",
---name = "launch - netcoredbg",
---request = "launch",
---program = function()
-----return vim.fn.input("Path to dll: ", vim.fn.getcwd() .. "/bin/Debug/", "file")
---return vim.fn.input("Path to dll: ", "${workspace}/bin/Debug/", "file")
---end,
---},
---}

@@ -4,6 +4,8 @@ local function runDebugger(command)
 
 	if filetype == "cs" then
 		require("libs.dap.csharp").runSingleTest(command)
+	elseif filetype == "javascript" or filetype == "typescript" then
+		require("libs.dap.node").runSingleTest(command)
 	else
 		print("unknown filetype: ", filetype)
 	end
