@@ -13,18 +13,22 @@ function M.setup()
 end
 
 function M.runSingleTest(cmd)
+	local temp = utils.parseBashCommand(cmd)
+	local args = { "--inspect-brk" }
+	for _, v in ipairs(temp) do
+		table.insert(args, v)
+	end
 	dap.run({
 		type = "node2",
 		request = "launch",
 		cwd = vim.fn.getcwd(),
-		runtimeArgs = { "--inspect-brk", cmd },
+		runtimeArgs = args,
 		sourceMaps = true,
 		protocol = "inspector",
 		skipFiles = { "<node_internals>/**/*.js" },
 		console = "integratedTerminal",
 		port = 9229,
 	})
-	os.execute("sleep 1")
 end
 
 return M
