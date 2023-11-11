@@ -27,6 +27,7 @@ end
 require("dap").set_log_level("DEBUG")
 require("libs.dap.csharp").setup()
 require("libs.dap.node").setup()
+require("libs.dap.java").setup()
 
 local currentScriptPath = debug.getinfo(1, "S").source:sub(2)
 local currentScriptDir = vim.fn.fnamemodify(currentScriptPath, ":h")
