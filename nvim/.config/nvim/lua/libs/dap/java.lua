@@ -16,7 +16,8 @@ function M.setup()
 end
 
 function M.runSingleTest(cmd)
-	local args = utils.parseBashCommand(cmd)
+	require("jdtls").test_nearest_method()
+	--local args = utils.parseBashCommand(cmd)
 	--for _, v in ipairs(args) do
 	--print(v)
 	--end
@@ -30,6 +31,7 @@ function M.runSingleTest(cmd)
 	--console = "integratedTerminal",
 	--port = 5005,
 	--})
+	--print(cmd)
 end
 
 return M

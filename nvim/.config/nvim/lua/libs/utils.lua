@@ -11,6 +11,7 @@ end
 
 -- ~/.local/share/nvim/mason
 M.mason_path = M.concat_paths(vim.fn.stdpath("data"), "mason")
+M.vs_code_exensions_path = M.concat_paths("~", ".vscode", "extensions")
 
 function M.parseBashCommand(command)
 	local args = {}

@@ -205,34 +205,39 @@ Debug Plugins
 
 ## Installed by Mason
 
-    ◍ prisma-language-server (keywords: prisma)
-    ◍ tailwindcss-language-server (keywords: css)
-    ◍ typescript-language-server (keywords: typescript, javascript)
-    ◍ clang-format (keywords: c, c#, c++, json, java, javascript)
-    ◍ cspell (keywords: )
-    ◍ rust-analyzer (keywords: rust)
-    ◍ pyright (keywords: python)
-    ◍ pylint (keywords: python)
-    ◍ astro-language-server (keywords: astro)
-    ◍ jdtls (keywords: java)
-    ◍ lua-language-server (keywords: lua)
-    ◍ html-lsp (keywords: html)
-    ◍ eslint-lsp (keywords: javascript, typescript)
-    ◍ css-lsp (keywords: css, scss, less)
-    ◍ csharpier (keywords: c#)
-    ◍ node-debug2-adapter (keywords: javascript, typescript)
-    ◍ clangd (keywords: c, c++)
-    ◍ cmake-language-server (keywords: cmake)
-    ◍ cpplint (keywords: c, c++)
-    ◍ docker-compose-language-service (keywords: docker)
-    ◍ dockerfile-language-server (keywords: docker)
-    ◍ ltex-ls (keywords: text, markdown, latex)
-    ◍ markdownlint (keywords: markdown)
-    ◍ netcoredbg (keywords: .net, c#, f#)
-    ◍ omnisharp (keywords: c#)
-    ◍ prettier (keywords: angular, css, flow, graphql, html, json, jsx, javascript, less, markdown, scss, typescript, vue, yaml)
-    ◍ rustfmt (keywords: rust)
-    ◍ stylua (keywords: lua, luau)
+    ◍ astro-language-server
+    ◍ clang-format
+    ◍ clangd
+    ◍ cmake-language-server
+    ◍ cpplint
+    ◍ csharpier
+    ◍ cspell
+    ◍ css-lsp
+    ◍ docker-compose-language-service
+    ◍ dockerfile-language-server
+    ◍ eslint-lsp
+    ◍ html-lsp
+    ◍ java-debug-adapter
+    ◍ jdtls
+    ◍ ltex-ls
+    ◍ lua-language-server
+    ◍ markdownlint
+    ◍ netcoredbg
+    ◍ node-debug2-adapter
+    ◍ omnisharp
+    ◍ prettier
+    ◍ prisma-language-server
+    ◍ pylint
+    ◍ pyright
+    ◍ rust-analyzer
+    ◍ rustfmt
+    ◍ stylua
+    ◍ tailwindcss-language-server
+    ◍ typescript-language-server
+
+## Installed by VSCode
+
+    [Test Runner for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-test)
 
 ## Modifying VimRc
 
