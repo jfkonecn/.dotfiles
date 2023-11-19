@@ -27,6 +27,7 @@ vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
+vim.api.nvim_set_keymap("n", "<leader>fk", ":Telescope keymaps<CR>", { noremap = true, silent = true })
 -- Copy selected text to clipboard in visual mode
 vim.api.nvim_set_keymap("v", "<leader>y", '"+y', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<A-k>", ":m-2<CR>", { noremap = true, silent = true })
