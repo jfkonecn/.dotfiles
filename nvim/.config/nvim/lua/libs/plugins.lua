@@ -64,4 +64,6 @@ Plug("stevearc/oil.nvim")
 Plug("mfussenegger/nvim-dap")
 Plug("rcarriga/nvim-dap-ui")
 
+Plug("mfussenegger/nvim-jdtls")
+
 vim.call("plug#end")

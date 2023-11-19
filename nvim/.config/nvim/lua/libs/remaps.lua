@@ -31,3 +31,10 @@ vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 vim.api.nvim_set_keymap("v", "<leader>y", '"+y', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<A-k>", ":m-2<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<A-j>", ":m+1<CR>", { noremap = true, silent = true })
+
+vim.cmd([[
+  nnoremap ss :lua print("not java")<CR>
+]])
+vim.cmd([[
+  autocmd FileType java nnoremap ss :lua print("java")<CR>
+]])
