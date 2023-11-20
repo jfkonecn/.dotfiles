@@ -13,11 +13,13 @@ function M.setup()
 end
 
 function M.runSingleTest(cmd)
+	local jobIsRunning = false
 	vim.fn.jobstart("VSTEST_HOST_DEBUG=1 " .. cmd, {
 		on_stdout = function(_, _, _)
 			if jobIsRunning then
 				return
 			end
+			jobIsRunning = true
 			local pid = tonumber(io.popen("pgrep -n dotnet"):read("*n"))
 
 			dap.run({
