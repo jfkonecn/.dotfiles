@@ -205,12 +205,16 @@ Debug Plugins
 
 ## Installed by Mason
 
-    ◍ astro-language-server
-    ◍ clang-format
     ◍ clangd
+    ◍ clang-format
+    ◍ csharpier
+    ◍ typescript-language-server
+    ◍ pyright
+    ◍ rust-analyzer
+    ◍ google-java-format
+    ◍ astro-language-server
     ◍ cmake-language-server
     ◍ cpplint
-    ◍ csharpier
     ◍ cspell
     ◍ css-lsp
     ◍ docker-compose-language-service
@@ -228,12 +232,9 @@ Debug Plugins
     ◍ prettier
     ◍ prisma-language-server
     ◍ pylint
-    ◍ pyright
-    ◍ rust-analyzer
     ◍ rustfmt
     ◍ stylua
     ◍ tailwindcss-language-server
-    ◍ typescript-language-server
 
 ## Installed by VSCode
 
