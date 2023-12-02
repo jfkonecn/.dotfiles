@@ -47,8 +47,7 @@ Plug("tpope/vim-fugitive")
 Plug("kamykn/spelunker.vim")
 
 -- lint manager
--- Plug('mfussenegger/nvim-lint')
-Plug("jose-elias-alvarez/null-ls.nvim")
+Plug("nvimtools/none-ls.nvim")
 
 -- comment out lines
 Plug("preservim/nerdcommenter")
@@ -65,8 +64,6 @@ Plug("mfussenegger/nvim-dap")
 Plug("rcarriga/nvim-dap-ui")
 
 Plug("mfussenegger/nvim-jdtls")
-Plug("mfussenegger/nvim-lint")
-Plug("stevearc/conform.nvim")
 Plug("WhoIsSethDaniel/mason-tool-installer.nvim")
 
 vim.call("plug#end")
