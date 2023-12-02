@@ -51,6 +51,8 @@ null_ls.setup({
 		null_ls.builtins.diagnostics.pylint.with({
 			prefer_local = ".venv/bin",
 		}),
+		null_ls.builtins.formatting.isort,
+		null_ls.builtins.formatting.black,
 		null_ls.builtins.formatting.csharpier,
 		null_ls.builtins.formatting.rustfmt,
 		null_ls.builtins.formatting.clang_format.with({

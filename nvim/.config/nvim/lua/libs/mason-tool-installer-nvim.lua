@@ -1,6 +1,7 @@
 require("mason-tool-installer").setup({
 	ensure_installed = {
 		"astro-language-server",
+		"black",
 		"clang-format",
 		"clangd",
 		"cmake-language-server",
@@ -13,6 +14,7 @@ require("mason-tool-installer").setup({
 		"eslint-lsp",
 		"google-java-format",
 		"html-lsp",
+		"isort",
 		"java-debug-adapter",
 		"jdtls",
 		"ltex-ls",
