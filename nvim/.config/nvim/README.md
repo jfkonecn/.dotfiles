@@ -11,6 +11,7 @@ Place the appimage file in ~/bin make sure the file name is nvim
 ### clone to this location
 
 - %USERPROFILE%\AppData\Local\nvim (on windows)
+
 - ~/.config/nvim (on linux)
 
 ### Requirements
@@ -20,7 +21,7 @@ Place the appimage file in ~/bin make sure the file name is nvim
     - [ripgrep](https://github.com/BurntSushi/ripgrep)
     - zig (for windows only)
 
-Note on windows you have to install visual studio with the c++ complier and
+Note on windows you have to install visual studio with the c++ compiler and
 then run a powershell instance through visual studio - using [scoop...](https://scoop.sh/)
 check if %USERPROFILE%\scoop\shims is in your path
 
