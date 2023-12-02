@@ -5,14 +5,13 @@ local utils = require("libs.utils")
 local M = {}
 
 function M.setup()
-	-- /home/jfkonecn/.local/share/nvim/mason/packages/debugpy/venv/bin
-
-	--local python_debug = utils.concat_paths(utils.mason_path, "packages", "debugpy", "venv", "bin", "python")
-	--require("dap-python").setup(python_debug)
+	-- ~/.local/share/nvim/mason/packages/debugpy/venv/bin
+	local python_debug = utils.concat_paths(utils.mason_path, "packages", "debugpy", "venv", "bin", "python")
+	require("dap-python").setup(python_debug)
 end
 
 function M.runSingleTest(cmd)
-	--require("dap-python").test_method()
+	require("dap-python").test_method()
 end
 
 return M
