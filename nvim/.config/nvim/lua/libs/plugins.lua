@@ -67,4 +67,5 @@ Plug("mfussenegger/nvim-jdtls")
 Plug("WhoIsSethDaniel/mason-tool-installer.nvim")
 Plug("nvim-telescope/telescope-ui-select.nvim")
 
+Plug("mfussenegger/nvim-dap-python")
 vim.call("plug#end")

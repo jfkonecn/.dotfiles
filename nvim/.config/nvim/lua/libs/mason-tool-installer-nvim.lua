@@ -9,6 +9,7 @@ require("mason-tool-installer").setup({
 		"csharpier",
 		"cspell",
 		"css-lsp",
+		"debugpy",
 		"docker-compose-language-service",
 		"dockerfile-language-server",
 		"eslint-lsp",

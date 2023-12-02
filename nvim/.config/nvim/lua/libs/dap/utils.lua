@@ -8,6 +8,8 @@ local function runDebugger(command)
 		require("libs.dap.node").runSingleTest(command)
 	elseif filetype == "java" then
 		require("libs.dap.java").runSingleTest(command)
+	elseif filetype == "python" then
+		require("libs.dap.python").runSingleTest(command)
 	else
 		print("unknown filetype: ", filetype)
 	end
