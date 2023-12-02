@@ -65,5 +65,8 @@ Plug("mfussenegger/nvim-dap")
 Plug("rcarriga/nvim-dap-ui")
 
 Plug("mfussenegger/nvim-jdtls")
+Plug("mfussenegger/nvim-lint")
+Plug("stevearc/conform.nvim")
+Plug("WhoIsSethDaniel/mason-tool-installer.nvim")
 
 vim.call("plug#end")
