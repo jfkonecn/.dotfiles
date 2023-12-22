@@ -18,7 +18,6 @@ vim.g.mapleader = " "
 map("n", "<leader>fw", ":lua require('telescope.builtin').grep_string({ search = vim.fn.input(\"Grep For > \")})<CR>")
 
 map("n", "<leader>fa", ":lua require('telescope.builtin').find_files({ hidden = true})<CR>")
-map("n", "<leader>ft", ":lua print(vim.bo.filetype)<CR>")
 
 -- hide search results
 map("n", "<leader>noh", ":noh<CR>")
