@@ -20,6 +20,7 @@ require("nvim-treesitter.configs").setup({
 		"vim",
 		"python",
 		"astro",
+		"sql",
 		"yaml",
 		"prisma",
 	},
