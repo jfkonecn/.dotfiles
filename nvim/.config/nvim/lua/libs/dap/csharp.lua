@@ -13,6 +13,7 @@ function M.setup()
 end
 
 function M.runSingleTest(cmd)
+	-- checkout https://github.com/Issafalcon/neotest-dotnet
 	local jobIsRunning = false
 	vim.fn.jobstart("VSTEST_HOST_DEBUG=1 " .. cmd, {
 		on_stdout = function(_, _, _)
