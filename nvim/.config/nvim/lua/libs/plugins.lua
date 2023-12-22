@@ -18,7 +18,10 @@ Plug("saadparwaiz1/cmp_luasnip") -- Snippets source for nvim-cmp
 Plug("L3MON4D3/LuaSnip") -- Snippets plugin
 Plug("rafamadriz/friendly-snippets")
 Plug("hrsh7th/cmp-nvim-lsp-signature-help")
+
 Plug("vim-test/vim-test")
+-- switch more to neotest when it has more language support
+Plug("nvim-neotest/neotest")
 
 -- fuzzy finder
 -- https://github.com/nvim-telescope/telescope.nvim
