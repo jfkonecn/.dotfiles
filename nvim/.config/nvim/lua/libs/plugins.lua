@@ -28,11 +28,13 @@ Plug("nvim-telescope/telescope.nvim", { tag = "0.1.0" })
 -- lsp manager
 Plug("williamboman/mason.nvim")
 
--- checkout lualine
-Plug("beauwilliams/statusline.lua")
+-- status line
+--Plug("beauwilliams/statusline.lua")
+Plug("nvim-lualine/lualine.nvim")
 
 -- theme
-Plug("gruvbox-community/gruvbox")
+--Plug("gruvbox-community/gruvbox")
+Plug("navarasu/onedark.nvim")
 
 -- is a parser generator tool and an incremental parsing library
 Plug("nvim-treesitter/nvim-treesitter", { ["do"] = ":TSUpdate" })
