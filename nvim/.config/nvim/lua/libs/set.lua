@@ -19,7 +19,6 @@ vim.opt.linebreak = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.exrc = true
-vim.cmd("colorscheme gruvbox")
 
 vim.opt.spelllang = "en_us"
 vim.opt.spell = true

@@ -28,6 +28,7 @@ Plug("nvim-telescope/telescope.nvim", { tag = "0.1.0" })
 -- lsp manager
 Plug("williamboman/mason.nvim")
 
+-- checkout lualine
 Plug("beauwilliams/statusline.lua")
 
 -- theme
@@ -73,4 +74,9 @@ Plug("WhoIsSethDaniel/mason-tool-installer.nvim")
 Plug("nvim-telescope/telescope-ui-select.nvim")
 
 Plug("mfussenegger/nvim-dap-python")
+
+-- Experimental so could break
+Plug("folke/noice.nvim")
+Plug("MunifTanjim/nui.nvim")
+
 vim.call("plug#end")
