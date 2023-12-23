@@ -38,27 +38,27 @@ function M.runSingleTest(cmd)
 	--print(cmd)
 	local finish_future = async.control.future()
 	local debugStarted = false
-	local waitingForDebugger = false
 	local java_test_port
 	local result_code
+	local all_output = ""
 	vim.fn.jobstart(cmd .. " -Dmaven.surefire.debug", {
 		on_stdout = function(_, data, _)
 			if not debugStarted then
+				-- output comes in chunks, so we need to concatenate it
 				for _, output in ipairs(data) do
-					java_test_port = java_test_port or string.match(output, "at%saddress%p%s(%d+)")
-
-					if string.find(output, "Listening for transport dt_socket at address") then
-						waitingForDebugger = true
-					end
+					all_output = all_output .. output
+					java_test_port = java_test_port or string.match(all_output, "at%saddress%p%s(%d+)")
 				end
-				if java_test_port ~= nil and waitingForDebugger then
+				if java_test_port ~= nil then
 					debugStarted = true
 					dap.run({
 						type = "java",
 						name = "Run Single Java Test",
 						request = "attach",
 						hostName = "localhost",
-						port = java_test_port,
+						-- sometimes the full port number is not caught
+						-- so I assume its 5005
+						port = 5005,
 					})
 				end
 			end
