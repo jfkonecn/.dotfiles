@@ -8,6 +8,8 @@
 local Plug = vim.fn["plug#"]
 vim.call("plug#begin")
 
+Plug("folke/neodev.nvim")
+
 -- language server
 -- https://github.com/neovim/nvim-lspconfig
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
@@ -21,8 +23,9 @@ Plug("hrsh7th/cmp-nvim-lsp-signature-help")
 
 Plug("vim-test/vim-test")
 -- switch more to neotest when it has more language support
+-- using for dap testing for now
 Plug("nvim-neotest/neotest")
-
+--Plug("rcasnearestia/neotest-java")
 -- fuzzy finder
 -- https://github.com/nvim-telescope/telescope.nvim
 Plug("nvim-lua/plenary.nvim")

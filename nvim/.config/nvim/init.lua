@@ -1,6 +1,7 @@
 -- :options  // gives all config options
 -- so % // loads script
 require("libs.plugins")
+require("libs.neo-dev")
 require("libs.mason")
 require("libs.set")
 require("libs.tree-sitter")
