@@ -58,19 +58,20 @@ function M.runSingleTest(cmd)
 						name = "Run Single Java Test",
 						request = "attach",
 						hostName = "localhost",
-						--normally port 5005,
 						port = java_test_port,
 					})
 				end
 			end
 		end,
 		on_stderr = function(_, data, _)
-			print("stderr ", data)
+			for _, output in ipairs(data) do
+				print("stderr ", output)
+			end
 		end,
 		on_exit = function(_, exit_code, _)
 			finish_future.set()
 			result_code = exit_code
-			print("exit code ", exit_code)
+			print("exit code " .. exit_code)
 		end,
 	})
 	if result_code == nil then

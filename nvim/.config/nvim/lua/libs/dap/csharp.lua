@@ -46,7 +46,9 @@ function M.runSingleTest(cmd)
 			end
 		end,
 		on_stderr = function(_, data, _)
-			print("stderr ", data)
+			for _, output in ipairs(data) do
+				print("stderr ", output)
+			end
 		end,
 		on_exit = function(_, exit_code, _)
 			finish_future.set()
