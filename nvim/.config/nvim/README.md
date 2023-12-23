@@ -322,3 +322,12 @@ dap.configurations.cs = {
 	},
 }
 ```
+
+## Linux Help
+
+Get process id listening on port and kill it.
+
+```sh
+sudo ss -lptn 'sport = :5005'
+kill <pid>
+```
