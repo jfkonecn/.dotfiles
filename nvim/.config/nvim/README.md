@@ -257,7 +257,7 @@ Debug Plugins
 
 ## Run workspace lua script
 
-Add .nvimrc.lua file
+Add .nvim.lua file
 
 ## Install Co-Pilot
 
