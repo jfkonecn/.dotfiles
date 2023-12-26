@@ -3,7 +3,7 @@
 require("libs.plugins")
 require("libs.neo-dev")
 require("libs.mason")
-require("libs.set")
+require("libs.options")
 require("libs.tree-sitter")
 require("libs.lsps.init")
 require("libs.remaps")
