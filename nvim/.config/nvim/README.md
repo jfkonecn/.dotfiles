@@ -311,9 +311,7 @@ echo '{ "venvPath": ".", "venv": ".venv" }' > pyrightconfig.json
 ### C\#
 
 ```lua
-local dap = require("dap")
-
-dap.configurations.cs = {
+require("dap")..configurations.cs = {
 	{
 		type = "coreclr",
 		name = "launch - netcoredbg",
@@ -321,6 +319,17 @@ dap.configurations.cs = {
 		program = "${workspaceFolder}/CSharpPlayground.Console/bin/Debug/net6.0/CSharpPlayground.Console.dll",
 	},
 }
+
+require("dap").configurations.java = {
+	{
+		projectName = "java-playground",
+		mainClass = "com.advent.of.code.App",
+		name = "Launch Java Playground",
+		request = "launch",
+		type = "java",
+	},
+}
+
 ```
 
 ## Linux Help
