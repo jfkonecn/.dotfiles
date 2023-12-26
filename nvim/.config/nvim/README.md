@@ -286,6 +286,18 @@ Add .nvim.lua file to your repo
 - `:help 'exrc'`
 - `:help exrc`
 
+### Create .ignore file so Telescope can find gitignore files
+
+.ignore file
+
+```txt
+!.ignore
+!.nvim.lua
+!.env
+```
+
+### Snippets
+
 [Disable formatting](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/SOURCES.md#disablequery)
 
 ```lua
