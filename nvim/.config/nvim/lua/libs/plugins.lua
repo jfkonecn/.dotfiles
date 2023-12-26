@@ -87,4 +87,6 @@ Plug("mfussenegger/nvim-dap-python")
 Plug("folke/noice.nvim")
 Plug("MunifTanjim/nui.nvim")
 
+Plug("iamcco/markdown-preview.nvim", { ["do"] = "cd app && npx -y yarn install" })
+
 vim.call("plug#end")
