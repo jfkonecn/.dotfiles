@@ -1,5 +1,25 @@
 -- This is your opts table
 require("telescope").setup({
+	pickers = {
+		find_files = {
+			find_command = {
+				"rg",
+				"--files",
+				"--no-ignore",
+				"--iglob",
+				"!.git",
+				"--hidden",
+				"--iglob",
+				"!node_modules",
+				"--iglob",
+				"!dist",
+				"--iglob",
+				"!build",
+				"--iglob",
+				"!target",
+			},
+		},
+	},
 	extensions = {
 		["ui-select"] = {
 			require("telescope.themes").get_dropdown({
