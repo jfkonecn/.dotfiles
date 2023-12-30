@@ -4,5 +4,4 @@ cssCapabilities.textDocument.completion.completionItem.snippetSupport = true
 
 require("lspconfig").cssls.setup({
 	capabilities = cssCapabilities,
-	on_attach = require("libs.lsps.utils").on_attach,
 })

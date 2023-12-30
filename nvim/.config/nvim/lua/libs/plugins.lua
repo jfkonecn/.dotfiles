@@ -57,9 +57,6 @@ Plug("kristijanhusak/vim-dadbod-completion")
 -- look into
 -- Plug('mbbill/undotree')
 
--- spell checker
-Plug("kamykn/spelunker.vim")
-
 -- lint manager
 Plug("nvimtools/none-ls.nvim")
 

@@ -42,5 +42,4 @@ cmp.setup({
 		{ name = "luasnip" },
 		{ name = "nvim_lsp_signature_help" },
 	},
-	on_attach = require("libs.lsps.utils").on_attach,
 })

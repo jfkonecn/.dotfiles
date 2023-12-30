@@ -19,6 +19,5 @@ require("lspconfig").lua_ls.setup({
 			},
 		},
 	},
-	on_attach = require("libs.lsps.utils").on_attach,
 	flags = require("libs.lsps.utils").lsp_flags,
 })

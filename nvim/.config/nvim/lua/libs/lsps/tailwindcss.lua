@@ -31,5 +31,4 @@ require("lspconfig").tailwindcss.setup({
 		"postcss.config.ts",
 		"windi.config.ts"
 	),
-	on_attach = require("libs.lsps.utils").on_attach,
 })

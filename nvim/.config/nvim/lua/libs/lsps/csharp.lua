@@ -39,6 +39,5 @@ require("lspconfig").omnisharp.setup({
 	-- Only run analyzers against open files when 'enableRoslynAnalyzers' is
 	-- true
 	analyze_open_documents_only = false,
-	on_attach = require("libs.lsps.utils").on_attach,
 	flags = require("libs.lsps.utils").lsp_flags,
 })

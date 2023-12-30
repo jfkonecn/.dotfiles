@@ -61,8 +61,10 @@ null_ls.setup({
 		null_ls.builtins.diagnostics.cpplint,
 		null_ls.builtins.code_actions.eslint,
 		null_ls.builtins.formatting.google_java_format,
-		--null_ls.builtins.code_actions.cspell,
-		--null_ls.builtins.diagnostics.cspell,
+		null_ls.builtins.code_actions.cspell,
+		null_ls.builtins.diagnostics.cspell,
+		null_ls.builtins.completion.spell,
+		null_ls.builtins.hover.dictionary,
 	},
 	on_attach = function(client, bufnr)
 		if client.supports_method("textDocument/formatting") then
@@ -71,9 +73,6 @@ null_ls.setup({
 				group = augroup,
 				buffer = bufnr,
 				callback = function()
-					-- nvim 0.8
-					-- vim.lsp.buf.format({ bufnr = bufnr })
-					-- works for nvim 0.9
 					lsp_formatting(bufnr)
 				end,
 			})

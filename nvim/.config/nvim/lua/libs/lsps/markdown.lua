@@ -1,3 +1,2 @@
-require("lspconfig").ltex.setup({
-	on_attach = require("libs.lsps.utils").on_attach,
-})
+--require("lspconfig").ltex.setup({
+--})
