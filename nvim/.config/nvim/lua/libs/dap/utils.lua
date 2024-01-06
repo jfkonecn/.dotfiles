@@ -11,7 +11,7 @@ local function runDebugger(command)
 	elseif filetype == "python" then
 		require("libs.dap.python").runSingleTest(command)
 	elseif filetype == "go" then
-		require("libs.dap.go").runSingleTest(command)
+		require("libs.dap.golang").runSingleTest(command)
 	else
 		print("command: ", command)
 		print("unknown filetype: ", filetype)
