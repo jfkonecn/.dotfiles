@@ -6,7 +6,7 @@ require("nvim-treesitter.configs").setup({
 		"cpp",
 		"c_sharp",
 		"css",
-		"help",
+		"vimdoc",
 		"html",
 		"http",
 		"json",
