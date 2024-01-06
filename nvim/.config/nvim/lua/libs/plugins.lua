@@ -81,6 +81,8 @@ Plug("nvim-telescope/telescope-ui-select.nvim")
 
 Plug("mfussenegger/nvim-dap-python")
 
+Plug("rest-nvim/rest.nvim")
+
 -- Experimental so could break
 Plug("folke/noice.nvim")
 Plug("MunifTanjim/nui.nvim")
