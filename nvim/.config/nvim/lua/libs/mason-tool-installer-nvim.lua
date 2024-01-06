@@ -37,6 +37,7 @@ require("mason-tool-installer").setup({
 		"gofumpt",
 		"goimports-reviser",
 		"golines",
+		"delve",
 	},
 	auto_update = true,
 })

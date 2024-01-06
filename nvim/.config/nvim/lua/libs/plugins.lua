@@ -73,6 +73,7 @@ Plug("stevearc/oil.nvim")
 
 Plug("mfussenegger/nvim-dap")
 Plug("rcarriga/nvim-dap-ui")
+Plug("leoluz/nvim-dap-go")
 
 Plug("mfussenegger/nvim-jdtls")
 Plug("WhoIsSethDaniel/mason-tool-installer.nvim")
