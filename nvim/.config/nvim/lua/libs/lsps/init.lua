@@ -18,6 +18,7 @@ require("libs.lsps.docker")
 require("libs.lsps.astro")
 require("libs.lsps.prisma")
 require("libs.lsps.sql")
+require("libs.lsps.golang")
 
 local telescopeBuiltin = require("telescope.builtin")
 vim.api.nvim_create_autocmd("LspAttach", {

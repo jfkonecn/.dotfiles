@@ -65,6 +65,9 @@ null_ls.setup({
 		null_ls.builtins.diagnostics.cspell,
 		null_ls.builtins.completion.spell,
 		null_ls.builtins.hover.dictionary,
+		null_ls.builtins.formatting.gofumpt,
+		null_ls.builtins.formatting.goimports_reviser,
+		null_ls.builtins.formatting.golines,
 	},
 	on_attach = function(client, bufnr)
 		if client.supports_method("textDocument/formatting") then

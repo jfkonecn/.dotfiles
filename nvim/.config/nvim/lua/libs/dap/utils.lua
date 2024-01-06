@@ -11,6 +11,7 @@ local function runDebugger(command)
 	elseif filetype == "python" then
 		require("libs.dap.python").runSingleTest(command)
 	else
+		print("command: ", command)
 		print("unknown filetype: ", filetype)
 	end
 end

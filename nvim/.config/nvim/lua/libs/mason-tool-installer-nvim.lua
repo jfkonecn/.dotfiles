@@ -33,6 +33,10 @@ require("mason-tool-installer").setup({
 		"stylua",
 		"tailwindcss-language-server",
 		"typescript-language-server",
+		"gopls",
+		"gofumpt",
+		"goimports-reviser",
+		"golines",
 	},
 	auto_update = true,
 })

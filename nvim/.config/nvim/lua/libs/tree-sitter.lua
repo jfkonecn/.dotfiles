@@ -23,6 +23,8 @@ require("nvim-treesitter.configs").setup({
 		"sql",
 		"yaml",
 		"prisma",
+		"go",
+		"gomod",
 	},
 })
 
