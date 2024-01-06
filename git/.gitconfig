@@ -9,3 +9,5 @@
 	useHttpPath = true
 [core]
 	editor = nvim
+[init]
+	defaultBranch = main
