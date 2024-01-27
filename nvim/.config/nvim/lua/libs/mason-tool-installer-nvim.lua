@@ -41,6 +41,7 @@ require("mason-tool-installer").setup({
 		"xmlformatter",
 		"kotlin-debug-adapter",
 		"kotlin-language-server",
+		"ktlint",
 	},
 	auto_update = true,
 })
