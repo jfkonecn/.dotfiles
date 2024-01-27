@@ -72,6 +72,7 @@ require("libs.dap.node").setup()
 require("libs.dap.java").setup()
 require("libs.dap.python").setup()
 require("libs.dap.golang").setup()
+require("libs.dap.kotlin").setup()
 
 vim.api.nvim_set_keymap("n", "<leader>dt", ":TestNearest -strategy=debugger<CR>", { noremap = true, silent = true })
 

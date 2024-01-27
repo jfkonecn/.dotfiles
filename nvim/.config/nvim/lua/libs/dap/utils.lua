@@ -14,6 +14,8 @@ function M.runDebugger(command)
 		require("libs.dap.python").runSingleTest(command)
 	elseif filetype == "go" then
 		require("libs.dap.golang").runSingleTest(command)
+	elseif filetype == "kotlin" then
+		require("libs.dap.kotlin").runSingleTest(command[1])
 	else
 		print("command: ", command)
 		print("unknown filetype: ", filetype)

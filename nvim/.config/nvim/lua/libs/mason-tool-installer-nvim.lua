@@ -39,6 +39,7 @@ require("mason-tool-installer").setup({
 		"golines",
 		"delve",
 		"xmlformatter",
+		"kotlin-debug-adapter",
 		"kotlin-language-server",
 	},
 	auto_update = true,
