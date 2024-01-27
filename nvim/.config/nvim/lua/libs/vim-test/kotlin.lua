@@ -16,7 +16,8 @@ function TestFile(file)
 	local pomFile = GetPomFile(file)
 	return vim.fn.match(file, vim.g["test#kotlin#maventest#file_pattern"]) ~= -1 and #pomFile > 0 and 1 or 0
 end
-vim.g["test#kotlin#maventest#test_file"] = TestFile
+--vim.g["test#kotlin#maventest#test_file"] = TestFile
+_G["test#kotlin#maventest#test_file"] = TestFile
 
 function BuildPosition(type, position)
 	local filename = vim.fn.fnamemodify(position.file, ":t:r")
