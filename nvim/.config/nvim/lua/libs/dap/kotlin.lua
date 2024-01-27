@@ -3,6 +3,16 @@ local async = require("neotest.async")
 
 local M = {}
 
+local function trimPathBeforeSegment(filePath, segment)
+	-- Pattern to find the segment and everything before it
+	-- Pattern explanation:
+	-- .-  : shortest sequence of any characters
+	-- ()  : captures the matched segment for later use
+	-- %/  : represents '/' character, escaped because '/' is a special character in Lua patterns
+	local _, _, afterSegment = filePath:find("src")
+	return afterSegment or filePath -- Return the part after the segment if found, otherwise the original path
+end
+
 function M.setup()
 	dap.adapters.kotlin = {
 		type = "executable",
@@ -18,10 +28,9 @@ function M.setup()
 			-- it has to correspond to the class file located at `build/classes/`
 			-- and of course you have to build before you debug
 			mainClass = function()
-				local root = vim.fs.find("src", { path = vim.uv.cwd(), upward = true, stop = vim.env.HOME })[1] or ""
+				--local root = vim.fs.find("src", { path = vim.loop.cwd(), upward = true, stop = vim.env.HOME })[1] or ""
 				local fname = vim.api.nvim_buf_get_name(0)
-				-- src/main/kotlin/websearch/Main.kt -> websearch.MainKt
-				return fname:gsub(root, ""):gsub("main/kotlin/", ""):gsub(".kt", "Kt"):gsub("/", "."):sub(2, -1)
+				return fname:gsub(".*/main/kotlin", ""):gsub(".kt", "Kt"):gsub("/", "."):sub(2, -1)
 			end,
 			projectRoot = "${workspaceFolder}",
 			jsonLogFile = "",
