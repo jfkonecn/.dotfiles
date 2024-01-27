@@ -1,9 +1,11 @@
--- Check and set the pattern variable
+vim.g["test#custom_runners"] = { kotlin = { "MavenTest" } }
+
 if vim.g["test#kotlin#maventest#file_pattern"] == nil then
 	vim.g["test#kotlin#maventest#file_pattern"] = "\\v([Tt]est.*|.*[Tt]est(s|Case)?)\\.kt$"
 end
 
 function TestFile(file)
+	print("test#kotlin#maventest#file_pattern")
 	if vim.g["test#kotlin#runner"] ~= nil then
 		if vim.g["test#kotlin#runner"] == "maventest" then
 			return 1
