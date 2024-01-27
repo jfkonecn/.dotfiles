@@ -1,4 +1,6 @@
-local function runDebugger(command)
+local M = {}
+
+function M.runDebugger(command)
 	local bufnr = vim.fn.bufnr()
 	local filetype = vim.api.nvim_buf_get_option(bufnr, "filetype")
 
@@ -18,6 +20,4 @@ local function runDebugger(command)
 	end
 end
 
-return {
-	runDebugger = runDebugger,
-}
+return M

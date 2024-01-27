@@ -27,6 +27,7 @@ require("nvim-treesitter.configs").setup({
 		"prisma",
 		"go",
 		"gomod",
+		"kotlin",
 	},
 })
 

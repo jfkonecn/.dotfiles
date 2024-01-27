@@ -38,6 +38,8 @@ require("mason-tool-installer").setup({
 		"goimports-reviser",
 		"golines",
 		"delve",
+		"xmlformatter",
+		"kotlin-language-server",
 	},
 	auto_update = true,
 })

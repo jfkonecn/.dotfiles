@@ -73,6 +73,10 @@ require("libs.dap.java").setup()
 require("libs.dap.python").setup()
 require("libs.dap.golang").setup()
 
-local currentScriptPath = debug.getinfo(1, "S").source:sub(2)
-local currentScriptDir = vim.fn.fnamemodify(currentScriptPath, ":h")
-vim.cmd("source " .. utils.concat_paths(currentScriptDir, "_init.vim"))
+vim.api.nvim_set_keymap("n", "<leader>dt", ":TestNearest -strategy=debugger<CR>", { noremap = true, silent = true })
+
+local function DebuggerStrategy(cmd)
+	require("libs.dap.utils").runDebugger({ cmd })
+end
+
+vim.g["test#custom_strategies"] = { debugger = DebuggerStrategy }
