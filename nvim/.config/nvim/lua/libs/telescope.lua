@@ -1,4 +1,5 @@
 local telescopeConfig = require("telescope.config")
+local trouble = require("trouble.providers.telescope")
 
 -- Clone the default Telescope configuration
 local vimgrep_arguments = { unpack(telescopeConfig.values.vimgrep_arguments) }

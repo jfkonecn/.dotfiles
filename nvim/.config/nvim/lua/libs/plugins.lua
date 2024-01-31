@@ -49,6 +49,8 @@ Plug("nvim-treesitter/nvim-treesitter-context")
 -- git manager
 Plug("tpope/vim-fugitive")
 
+Plug("folke/trouble.nvim")
+
 -- SQL manager
 Plug("tpope/vim-dadbod")
 Plug("kristijanhusak/vim-dadbod-ui")
