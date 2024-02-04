@@ -1,2 +1,3 @@
-vim.g["test#custom_runners"] = { kotlin = { "MavenTest" } }
-vim.g["test#kotlin#runner"] = "maventest"
+-- for some reason this is overriding all other language test runners
+--vim.g["test#custom_runners"] = { kotlin = { "MavenTest" } }
+--vim.g["test#kotlin#runner"] = "maventest"
