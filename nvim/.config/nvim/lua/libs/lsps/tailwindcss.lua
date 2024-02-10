@@ -15,6 +15,7 @@ require("lspconfig").tailwindcss.setup({
 		"vue",
 		"rust",
 		"astro",
+		"htmldjango",
 	},
 	init_options = {
 		userLanguages = {
