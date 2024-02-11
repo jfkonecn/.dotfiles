@@ -42,6 +42,7 @@ require("mason-tool-installer").setup({
 		"kotlin-debug-adapter",
 		"kotlin-language-server",
 		"ktlint",
+		"ruff-lsp",
 	},
 	auto_update = true,
 })

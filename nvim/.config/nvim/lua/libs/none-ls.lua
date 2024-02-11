@@ -48,9 +48,9 @@ null_ls.setup({
 		}),
 		null_ls.builtins.diagnostics.markdownlint,
 		-- https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTIN_CONFIG.md
-		null_ls.builtins.diagnostics.pylint.with({
-			prefer_local = ".venv/bin",
-		}),
+		--null_ls.builtins.diagnostics.pylint.with({
+		--prefer_local = ".venv/bin",
+		--}),
 		null_ls.builtins.formatting.isort,
 		null_ls.builtins.formatting.black,
 		null_ls.builtins.formatting.csharpier,
