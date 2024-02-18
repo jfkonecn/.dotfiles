@@ -12,7 +12,5 @@ require("lspconfig").ltex.setup({
 		"quarto",
 		"rmd",
 		"context",
-		"html",
-		"xhtml",
 	},
 })
