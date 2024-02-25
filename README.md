@@ -29,3 +29,9 @@
 6. Install [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 7. Install [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 8. Install [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+9. (Optional) add .gitconfig-work for git work email
+
+## Where to put Repos
+
+- ~/work
+- ~/oss
