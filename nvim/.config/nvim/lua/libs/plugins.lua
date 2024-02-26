@@ -68,7 +68,11 @@ require("lazy").setup({
 
 	"christoomey/vim-tmux-navigator",
 
-	"ThePrimeagen/harpoon",
+	{
+		"ThePrimeagen/harpoon",
+		branch = "harpoon2",
+		dependencies = { "nvim-lua/plenary.nvim" },
+	},
 
 	"stevearc/oil.nvim",
 

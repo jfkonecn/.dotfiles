@@ -14,9 +14,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
---local Plug = vim.fn["plug#"]
---vim.call("plug#begin")
---vim.call("plug#end")
 require("libs.plugins")
 require("libs.neo-dev")
 require("libs.mason")
