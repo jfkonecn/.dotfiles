@@ -351,3 +351,7 @@ Get process id listening on port and kill it.
 sudo ss -lptn 'sport = :5005'
 kill <pid>
 ```
+
+## Explore Help
+
+[here](https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/)
