@@ -38,7 +38,7 @@ require("mason-tool-installer").setup({
 		"goimports-reviser",
 		"golines",
 		"delve",
-		"xmlformatter",
+		"lemminx",
 		"kotlin-debug-adapter",
 		"kotlin-language-server",
 		"ktlint",

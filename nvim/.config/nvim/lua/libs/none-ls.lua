@@ -31,11 +31,11 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup({
 	sources = {
 		null_ls.builtins.formatting.stylua,
-		null_ls.builtins.diagnostics.eslint.with({
-			--condition = function(utils)
-			--return utils.root_has_file({ ".eslint", ".eslintrc.json", ".eslintrc.js" })
-			--end,
-		}),
+		--null_ls.builtins.diagnostics.eslint.with({
+		--condition = function(utils)
+		--return utils.root_has_file({ ".eslint", ".eslintrc.json", ".eslintrc.js" })
+		--end,
+		--}),
 		--null_ls.builtins.formatting.eslint.with({
 		----condition = function(utils)
 		----return utils.root_has_file({ ".eslint", ".eslintrc.json", ".eslintrc.js" })
@@ -54,12 +54,13 @@ null_ls.setup({
 		null_ls.builtins.formatting.isort,
 		null_ls.builtins.formatting.black,
 		null_ls.builtins.formatting.csharpier,
-		null_ls.builtins.formatting.rustfmt,
+		require("none-ls.formatting.rustfmt"),
 		null_ls.builtins.formatting.clang_format.with({
 			filetypes = { "c", "cpp", "objc", "objcpp" },
 		}),
-		null_ls.builtins.diagnostics.cpplint,
-		null_ls.builtins.code_actions.eslint,
+		require("none-ls.diagnostics.cpplint"),
+		require("none-ls.code_actions.eslint"),
+		require("none-ls.diagnostics.eslint"),
 		null_ls.builtins.formatting.google_java_format,
 		--null_ls.builtins.code_actions.cspell,
 		--null_ls.builtins.diagnostics.cspell,
@@ -68,7 +69,6 @@ null_ls.setup({
 		null_ls.builtins.formatting.gofumpt,
 		null_ls.builtins.formatting.goimports_reviser,
 		null_ls.builtins.formatting.golines,
-		null_ls.builtins.formatting.xmlformat,
 		null_ls.builtins.diagnostics.ktlint,
 		null_ls.builtins.formatting.ktlint,
 	},
