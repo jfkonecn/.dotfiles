@@ -2,6 +2,8 @@
 vim.api.nvim_set_keymap("v", "<leader>y", '"+y', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<A-k>", ":m-2<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<A-j>", ":m+1<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
 
 local function generate_and_copy_uuid()
 	local handle = io.popen("uuidgen | tr -d '\\n'")
