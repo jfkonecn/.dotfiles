@@ -5,10 +5,10 @@ vim.api.nvim_set_keymap("n", "<A-j>", ":m+1<CR>", { noremap = true, silent = tru
 vim.api.nvim_set_keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap("n", "<C-Up>", ":resize +3<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-Down>", ":resize -3<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-Left>", ":vertical resize -3<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-Right>", ":vertical resize +3<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-Up>", ":resize +1<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-Down>", ":resize -1<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-Left>", ":vertical resize -1<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-Right>", ":vertical resize +1<CR>", { noremap = true, silent = true })
 
 local function generate_and_copy_uuid()
 	local handle = io.popen("uuidgen | tr -d '\\n'")
