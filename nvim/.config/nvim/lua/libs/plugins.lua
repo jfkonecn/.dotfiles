@@ -56,7 +56,7 @@ require("lazy").setup({
 	"kristijanhusak/vim-dadbod-completion",
 
 	-- look into
-	-- 'mbbill/undotree',
+	"mbbill/undotree",
 
 	-- lint manager
 	"nvimtools/none-ls.nvim",
