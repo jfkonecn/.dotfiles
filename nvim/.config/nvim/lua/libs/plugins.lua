@@ -28,7 +28,7 @@ require("lazy").setup({
 	-- fuzzy finder
 	-- https://github.com/nvim-telescope/telescope.nvim
 	"nvim-lua/plenary.nvim",
-	{ "nvim-telescope/telescope.nvim", tag = "0.1.0" },
+	"nvim-telescope/telescope.nvim",
 
 	-- lsp manager
 	"williamboman/mason.nvim",
