@@ -111,7 +111,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export GCM_CREDENTIAL_STORE="plaintext"
+#export GCM_CREDENTIAL_STORE="plaintext"
 
 # source ~/.zshrc
 export PATH="$HOME/idea-IC-223.8836.41/bin:$PATH"
@@ -134,6 +134,14 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$PATH:$HOME/bin"
 
 
+if [[ $(uname) == "Darwin" ]]; then
+    export JAVA_HOME=/usr/local/opt/openjdk
+    alias j8="export JAVA_HOME=/usr/local/opt/openjdk@8 ; java -version"
+    alias j11="export JAVA_HOME=/usr/local/opt/openjdk@11 ; java -version"
+    alias j17="export JAVA_HOME=/usr/local/opt/openjdk@17 ; java -version"
+    alias j20="export JAVA_HOME=/usr/local/opt/openjdk@20 ; java -version"
+fi
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/jfkonecn/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -148,3 +156,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
