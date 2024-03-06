@@ -29,17 +29,29 @@
 6. Install [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 7. Install [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
+   I needed to do this for mac
+
    ```sh
    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
    ```
 
 8. Install [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
+   I needed to do this for mac
+
    ```sh
    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
    ```
 
 9. (Optional) add .gitconfig-work for git work email
+
+### Mac
+
+After installation
+
+```sh
+brew install --cask git-credential-manager
+```
 
 ## Where to put Repos
 

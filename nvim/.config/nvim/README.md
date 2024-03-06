@@ -343,6 +343,16 @@ require("dap").configurations.java = {
 
 ```
 
+## HTTP
+
+```http
+####
+GET http://localhost:9000/api/account
+Authorization: Bearer xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+####
+
+```
+
 ## Linux Help
 
 Get process id listening on port and kill it.
