@@ -136,7 +136,8 @@ export PATH="$PATH:$HOME/bin"
 
 if [[ $(uname) == "Darwin" ]]; then
     export JAVA_HOME=/usr/local/opt/openjdk
-    alias j8="export JAVA_HOME=/usr/local/opt/openjdk@8 ; java -version"
+    #alias j8="export JAVA_HOME=/usr/local/opt/openjdk@8 ; java -version"
+    alias j8="export JAVA_HOME=/Users/konecnyj/Library/Java/JavaVirtualMachines/temurin-1.8.0_402 ; java -version"
     alias j11="export JAVA_HOME=/usr/local/opt/openjdk@11 ; java -version"
     alias j17="export JAVA_HOME=/usr/local/opt/openjdk@17 ; java -version"
     alias j20="export JAVA_HOME=/usr/local/opt/openjdk@20 ; java -version"
