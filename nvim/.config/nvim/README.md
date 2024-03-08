@@ -365,3 +365,35 @@ kill <pid>
 ## Explore Help
 
 [here](https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/)
+
+## Scrolling
+
+NeoVim, like Vim, offers a variety of scrolling commands that can help you navigate your files more efficiently. Here's a list of some commonly used scrolling hotkeys:
+
+Centering, Top, and Bottom:
+
+zz: Centers the line with the cursor on the screen.
+zt: Moves the line with the cursor to the top of the screen.
+zb: Moves the line with the cursor to the bottom of the screen.
+Scrolling Lines:
+
+Ctrl-e: Scrolls the window downwards by one line without moving the cursor.
+Ctrl-y: Scrolls the window upwards by one line without moving the cursor.
+Scrolling Half-pages:
+
+Ctrl-d: Scrolls down half a page.
+Ctrl-u: Scrolls up half a page.
+Scrolling Full Pages:
+
+Ctrl-f: Scrolls forward one full screen.
+Ctrl-b: Scrolls back one full screen.
+Jumping to Specific Locations:
+
+H: Moves the cursor to the top (High) of the screen.
+M: Moves the cursor to the middle of the screen.
+L: Moves the cursor to the bottom (Low) of the screen.
+G: Jumps to a specific line in the document (e.g., 50G jumps to line 50). Without a number, it goes to the last line of the document.
+Percentage Scrolling:
+
+50%: Jumps to the line at the given percentage of the document (in this case, 50%).
+These commands can significantly enhance your navigation efficiency within your documents in NeoVim. It's worth experimenting with them to see which ones best fit your workflow.
