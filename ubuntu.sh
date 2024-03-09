@@ -3,7 +3,7 @@
 chsh -s $(which zsh)
 
 if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="git,nvim,tmux,zsh,bin"
+    STOW_FOLDERS="git,nvim,tmux,zsh,bin,i3"
 fi
 
 if [[ -z $DOTFILES ]]; then
