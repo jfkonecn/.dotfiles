@@ -57,3 +57,19 @@ brew install --cask git-credential-manager
 
 - ~/work
 - ~/oss
+
+## Mac OS
+
+### [Brew](https://docs.brew.sh/Installation)
+
+After installation
+
+```sh
+xargs brew install < my_brew.txt
+```
+
+### Save Brew List
+
+```sh
+brew leaves > my_brew.txt
+```

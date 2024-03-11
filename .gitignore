@@ -1,5 +1,5 @@
 .luarc.json
 .DS_Store
-nvim/.config/github-copilot/
-nvim/.config/htop/
-nvim/.config/iterm2/
+nvim/.config/*
+nvim/.config/nvim/spell/
+!nvim/.config/nvim/
