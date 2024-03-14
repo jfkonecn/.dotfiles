@@ -42,9 +42,9 @@ null_ls.setup({
 		----end,
 		--}),
 		null_ls.builtins.formatting.prettier.with({
-			--condition = function(utils)
-			--return utils.root_has_file({ ".prettierrc", ".prettierrc.json" })
-			--end,
+			condition = function(utils)
+				return utils.root_has_file({ ".prettierrc", ".prettierrc.json" })
+			end,
 		}),
 		null_ls.builtins.diagnostics.markdownlint,
 		-- https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTIN_CONFIG.md
