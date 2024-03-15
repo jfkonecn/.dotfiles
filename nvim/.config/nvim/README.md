@@ -305,6 +305,8 @@ require("null-ls").disable({
   method = require("null-ls").methods.FORMATTING,
 })
 
+vim.lsp.buf.format({ timeout_ms = 2000 })
+
 ```
 
 ## Local Configs
