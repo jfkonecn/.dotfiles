@@ -141,6 +141,14 @@ if [[ $(uname) == "Darwin" ]]; then
     alias j17="export JAVA_HOME=/usr/local/opt/openjdk@17 ; java -version"
     alias j20="export JAVA_HOME=/usr/local/opt/openjdk@20 ; java -version"
 fi
+if [[ $(uname) == "Linux" ]]; then
+    export JAVA_HOME=/usr/lib/jvm/default
+    alias j8="export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 ; java -version"
+    alias j11="export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64 ; java -version"
+    alias j17="export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64 ; java -version"
+    alias j20="export JAVA_HOME=/usr/lib/jvm/java-20-openjdk-amd64 ; java -version"
+    export GCM_CREDENTIAL_STORE="secretservice"
+fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
