@@ -5,8 +5,6 @@ maven
 mysql
 neovim
 nvm
-openjdk@11
-openjdk@8
 ripgrep
 stow
 tmux
