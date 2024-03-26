@@ -3,3 +3,5 @@
 nvim/.config/*
 nvim/.config/nvim/spell/
 !nvim/.config/nvim/
+bin/.local/
+!bin/.local/scripts/tmux-sessionizer.sh
