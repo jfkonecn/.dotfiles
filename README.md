@@ -53,6 +53,8 @@ After installation
 brew install --cask git-credential-manager
 ```
 
+Make sure that you go to Profiles -> Keys -> General and make "Left Option Key" to act as "ESC+" so left alt works
+
 ## Where to put Repos
 
 - ~/work
