@@ -163,6 +163,8 @@ if [[ $(uname) == "Linux" ]]; then
     export GCM_CREDENTIAL_STORE="secretservice"
 fi
 
+alias start-tmux="~/.local/scripts/tmux-sessionizer.sh"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('$HOME/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
