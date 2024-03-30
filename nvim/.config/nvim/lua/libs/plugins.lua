@@ -1,10 +1,7 @@
--- To install
--- :PlugInstall
--- To Remove, first remove plugin from config
--- :PlugClean
--- lua syntax
--- https://dev.to/vonheikemen/neovim-using-vim-plug-in-lua-3oom
--- https://github.com/junegunn/vim-plug
+-- copilot is dumb and will ignore these setting if they're called after initialization
+vim.g.copilot_no_tab_map = true
+vim.g.copilot_assume_mapped = true
+
 require("lazy").setup({
 
 	"folke/neodev.nvim",
@@ -48,7 +45,10 @@ require("lazy").setup({
 	-- git manager
 	"tpope/vim-fugitive",
 
-	"folke/trouble.nvim",
+	{
+		"folke/trouble.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+	},
 
 	-- SQL manager
 	"tpope/vim-dadbod",
