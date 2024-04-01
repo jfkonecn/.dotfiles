@@ -5,8 +5,13 @@ maven
 mysql
 neovim
 nvm
+openjdk@11
+python-setuptools
 ripgrep
+saml2aws
 stow
 tmux
+tomcat
+tomcat@9
 xclip
 zsh-syntax-highlighting
