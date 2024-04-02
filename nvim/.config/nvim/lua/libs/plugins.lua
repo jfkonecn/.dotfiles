@@ -59,11 +59,16 @@ require("lazy").setup({
 	"mbbill/undotree",
 
 	-- lint manager
-	"nvimtools/none-ls.nvim",
 	{
 		"nvimtools/none-ls.nvim",
 		dependencies = {
 			"nvimtools/none-ls-extras.nvim",
+		},
+	},
+	{
+		"davidmh/cspell.nvim",
+		dependencies = {
+			"nvimtools/none-ls.nvim",
 		},
 	},
 

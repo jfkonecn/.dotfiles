@@ -16,6 +16,7 @@
 --
 
 local null_ls = require("null-ls")
+local cspell = require("cspell")
 
 local lsp_formatting = function(bufnr)
 	vim.lsp.buf.format({
@@ -62,8 +63,8 @@ null_ls.setup({
 		require("none-ls.code_actions.eslint"),
 		require("none-ls.diagnostics.eslint"),
 		null_ls.builtins.formatting.google_java_format,
-		--null_ls.builtins.code_actions.cspell,
-		--null_ls.builtins.diagnostics.cspell,
+		cspell.code_actions,
+		cspell.diagnostics,
 		null_ls.builtins.completion.spell,
 		null_ls.builtins.hover.dictionary,
 		null_ls.builtins.formatting.gofumpt,
