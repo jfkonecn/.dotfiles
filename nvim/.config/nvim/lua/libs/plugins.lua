@@ -47,11 +47,11 @@ require("lazy").setup({
 	-- git manager
 	"tpope/vim-fugitive",
 
-	{
-		"folke/trouble.nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-	},
-
+	--{
+	--"folke/trouble.nvim",
+	--dependencies = { "nvim-tree/nvim-web-devicons" },
+	--},
+	"nvim-tree/nvim-web-devicons",
 	-- SQL manager
 	"tpope/vim-dadbod",
 	"kristijanhusak/vim-dadbod-ui",

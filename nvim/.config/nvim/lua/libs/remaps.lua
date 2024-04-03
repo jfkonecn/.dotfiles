@@ -24,3 +24,10 @@ local function generate_and_copy_uuid()
 end
 
 vim.api.nvim_create_user_command("UuidIntoReg", generate_and_copy_uuid, {})
+
+vim.api.nvim_set_keymap(
+	"n",
+	"<C-x>",
+	':lua vim.diagnostic.open_float(0, {scope="line"})<CR>',
+	{ noremap = true, silent = true }
+)
