@@ -29,3 +29,10 @@ vim.api.nvim_set_keymap(
 	':lua require("trouble").toggle("lsp_references")<CR>',
 	{ noremap = true, silent = true }
 )
+
+vim.api.nvim_set_keymap(
+	"n",
+	"<C-x>",
+	':lua vim.diagnostic.open_float(0, {scope="line"})<CR>',
+	{ noremap = true, silent = true }
+)
