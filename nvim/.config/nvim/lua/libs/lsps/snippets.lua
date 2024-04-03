@@ -5,6 +5,7 @@ require("luasnip.loaders.from_vscode").lazy_load()
 -- nvim-cmp setup
 local cmp = require("cmp")
 cmp.setup({
+	preselect = cmp.PreselectMode.None,
 	snippet = {
 		expand = function(args)
 			luasnip.lsp_expand(args.body)
