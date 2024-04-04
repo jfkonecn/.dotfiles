@@ -65,7 +65,7 @@ null_ls.setup({
 		null_ls.builtins.formatting.google_java_format,
 		cspell.code_actions,
 		cspell.diagnostics,
-		null_ls.builtins.completion.spell,
+		--null_ls.builtins.completion.spell,
 		null_ls.builtins.hover.dictionary,
 		null_ls.builtins.formatting.gofumpt,
 		null_ls.builtins.formatting.goimports_reviser,
