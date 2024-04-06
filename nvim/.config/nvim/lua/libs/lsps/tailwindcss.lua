@@ -30,6 +30,7 @@ require("lspconfig").tailwindcss.setup({
 		"tailwind.config.ts",
 		"postcss.config.js",
 		"postcss.config.ts",
+		"tailwind.config.mjs",
 		"windi.config.ts"
 	),
 })
