@@ -5,7 +5,7 @@ harpoon.setup({})
 vim.api.nvim_set_keymap(
 	"n",
 	"<leader>ha",
-	':lua require("harpoon"):list():append()<CR>',
+	':lua require("harpoon"):list():add()<CR>',
 	{ noremap = true, silent = true }
 )
 
