@@ -90,7 +90,7 @@ require("lazy").setup({
 	"stevearc/oil.nvim",
 
 	"mfussenegger/nvim-dap",
-	"rcarriga/nvim-dap-ui",
+	{ "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } },
 	"leoluz/nvim-dap-go",
 
 	"mfussenegger/nvim-jdtls",
@@ -99,7 +99,19 @@ require("lazy").setup({
 
 	"mfussenegger/nvim-dap-python",
 
-	"rest-nvim/rest.nvim",
+	{
+		"vhyrro/luarocks.nvim",
+		priority = 1000,
+		config = true,
+	},
+	{
+		"rest-nvim/rest.nvim",
+		ft = "http",
+		dependencies = { "luarocks.nvim" },
+		config = function()
+			require("rest-nvim").setup()
+		end,
+	},
 
 	-- Experimental so could break
 	"folke/noice.nvim",
