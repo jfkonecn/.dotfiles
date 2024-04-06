@@ -44,8 +44,9 @@ null_ls.setup({
 		--}),
 		null_ls.builtins.formatting.prettier.with({
 			condition = function(utils)
-				return utils.root_has_file({ ".prettierrc", ".prettierrc.json" })
+				return utils.root_has_file({ ".prettierrc", ".prettierrc.json", ".prettierrc.mjs" })
 			end,
+			extra_filetypes = { "astro" },
 		}),
 		null_ls.builtins.diagnostics.markdownlint,
 		-- https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTIN_CONFIG.md
@@ -60,8 +61,12 @@ null_ls.setup({
 			filetypes = { "c", "cpp", "objc", "objcpp" },
 		}),
 		require("none-ls.diagnostics.cpplint"),
-		require("none-ls.code_actions.eslint"),
-		require("none-ls.diagnostics.eslint"),
+		require("none-ls.code_actions.eslint").with({
+			extra_filetypes = { "astro" },
+		}),
+		require("none-ls.diagnostics.eslint").with({
+			extra_filetypes = { "astro" },
+		}),
 		null_ls.builtins.formatting.google_java_format,
 		cspell.code_actions,
 		cspell.diagnostics,
