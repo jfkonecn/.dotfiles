@@ -126,4 +126,6 @@ require("lazy").setup({
 		end,
 		ft = { "markdown" },
 	},
+
+	"norcalli/nvim-colorizer.lua",
 })
