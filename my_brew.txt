@@ -2,6 +2,7 @@ fd
 fzf
 helm
 htop
+jq
 maven
 mysql
 neovim
