@@ -22,6 +22,12 @@
    nvm use --lts
    ```
 
+   - Install yarn
+
+   ```sh
+   npm install -g yarn
+   ```
+
 2. Clone in your home directory
 3. Run the ubuntu.sh script
 4. Restart to get zsh to be your default shell
