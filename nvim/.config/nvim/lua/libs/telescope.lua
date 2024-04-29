@@ -64,6 +64,12 @@ require("libs.utils").map(
 	":lua require('telescope.builtin').grep_string({ search = vim.fn.input(\"Grep For > \")})<CR>"
 )
 
+require("libs.utils").map(
+	"n",
+	"<leader>fn",
+	":lua require('telescope.builtin').grep_string({ search = vim.fn.getreg('/'):gsub('\\<', ''):gsub('\\>', '')})<CR>"
+)
+
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
