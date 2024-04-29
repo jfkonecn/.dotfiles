@@ -67,7 +67,7 @@ require("libs.utils").map(
 require("libs.utils").map(
 	"n",
 	"<leader>fn",
-	":lua require('telescope.builtin').grep_string({ search = vim.fn.getreg('/'):gsub('\\<', ''):gsub('\\>', '')})<CR>"
+	":lua require('telescope.builtin').grep_string({ search = vim.fn.getreg('/'):gsub('\\\\<', ''):gsub('\\\\>', '')})<CR>"
 )
 
 require("libs.utils").map(
