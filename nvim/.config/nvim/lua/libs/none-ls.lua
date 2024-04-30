@@ -43,9 +43,10 @@ null_ls.setup({
 		----end,
 		--}),
 		null_ls.builtins.formatting.prettier.with({
-			--condition = function(utils)
-			--return utils.root_has_file({ ".prettierrc", ".prettierrc.json", ".prettierrc.mjs" })
-			--end,
+			condition = function(utils)
+				--return utils.root_has_file({ ".prettierrc", ".prettierrc.json", ".prettierrc.mjs" })
+				return true
+			end,
 			extra_filetypes = { "astro" },
 		}),
 		null_ls.builtins.diagnostics.markdownlint,
