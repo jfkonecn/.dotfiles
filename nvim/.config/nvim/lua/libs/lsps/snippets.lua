@@ -1,5 +1,33 @@
 -- luasnip setup
+-- https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua#L190
 local luasnip = require("luasnip")
+local s = luasnip.snippet
+--local sn = luasnip.snippet_node
+local t = luasnip.text_node
+--local i = luasnip.insert_node
+--local f = luasnip.function_node
+--local c = luasnip.choice_node
+--local d = luasnip.dynamic_node
+--local r = luasnip.restore_node
+
+luasnip.add_snippets("markdown", {
+	s("journal template", {
+		t({
+			os.date("# %Y-%m-%d"),
+			"",
+			"## Questions",
+			"",
+			"## Reminders",
+			"",
+			"## Meetings",
+			"",
+			"### Standup",
+			"",
+			"## Tasks",
+		}),
+	}),
+})
+
 require("luasnip.loaders.from_vscode").lazy_load()
 
 -- nvim-cmp setup
