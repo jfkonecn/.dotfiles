@@ -31,3 +31,16 @@ vim.api.nvim_set_keymap(
 	':lua vim.diagnostic.open_float(0, {scope="line"})<CR>',
 	{ noremap = true, silent = true }
 )
+
+vim.g.diagnostics_visible = true
+local function toggle_diagnostics()
+	if vim.g.diagnostics_visible then
+		vim.g.diagnostics_visible = false
+		vim.diagnostic.disable()
+	else
+		vim.g.diagnostics_visible = true
+		vim.diagnostic.enable()
+	end
+end
+vim.api.nvim_create_user_command("ToggleDiagnostics", toggle_diagnostics, {})
+vim.api.nvim_set_keymap("n", "<Leader>x", ":ToggleDiagnostics<CR>", { noremap = true, silent = true })
