@@ -32,3 +32,9 @@ require("nvim-treesitter.configs").setup({
 })
 
 require("treesitter-context").setup({})
+
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- https://neovim.io/doc/user/fold.html#fold-commands
+-- za to unfold
+vim.cmd([[ set nofoldenable]])
