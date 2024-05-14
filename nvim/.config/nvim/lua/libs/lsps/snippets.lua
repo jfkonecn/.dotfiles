@@ -5,15 +5,17 @@ local s = luasnip.snippet
 --local sn = luasnip.snippet_node
 local t = luasnip.text_node
 --local i = luasnip.insert_node
---local f = luasnip.function_node
+local f = luasnip.function_node
 --local c = luasnip.choice_node
 --local d = luasnip.dynamic_node
 --local r = luasnip.restore_node
 
 luasnip.add_snippets("markdown", {
 	s("journal template", {
+		f(function()
+			return os.date("# %Y-%m-%d")
+		end),
 		t({
-			os.date("# %Y-%m-%d"),
 			"",
 			"## Questions",
 			"",
