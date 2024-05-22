@@ -43,6 +43,7 @@ require("mason-tool-installer").setup({
 		"kotlin-language-server",
 		"ktlint",
 		"ruff-lsp",
+		"basedpyright",
 	},
 	auto_update = true,
 })
