@@ -2,12 +2,15 @@ fd
 fzf
 helm
 htop
+jpeg
 jq
+librsvg
 maven
 mysql
 neovim
 nvm
 openjdk@11
+pkg-config
 python-setuptools
 ripgrep
 saml2aws
