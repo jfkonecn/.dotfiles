@@ -128,4 +128,7 @@ require("lazy").setup({
 	},
 
 	"norcalli/nvim-colorizer.lua",
+
+	-- AI
+	"David-Kunz/gen.nvim",
 })
