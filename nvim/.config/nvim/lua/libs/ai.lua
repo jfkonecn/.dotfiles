@@ -2,4 +2,7 @@ require("gen").setup({
 	model = "llama3",
 })
 
-vim.keymap.set({ "n", "v" }, "<leader>]", ":Gen<CR>")
+require("gen").prompts["Explain_Code"] = {
+	prompt = "Explain the following $filetype code to me.\n$text",
+	replace = false,
+}
