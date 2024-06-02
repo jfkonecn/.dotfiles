@@ -4,4 +4,7 @@ vim.g.NERDCustomDelimiters = {
 		leftAlt = "/*",
 		rightAlt = "*/",
 	},
+	roc = {
+		left = "# ",
+	},
 }

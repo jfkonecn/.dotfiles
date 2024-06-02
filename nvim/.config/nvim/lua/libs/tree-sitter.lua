@@ -28,6 +28,7 @@ require("nvim-treesitter.configs").setup({
 		"go",
 		"gomod",
 		"kotlin",
+		"roc",
 	},
 })
 

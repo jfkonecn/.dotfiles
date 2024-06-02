@@ -181,3 +181,9 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 alias ai='ollama run llama3'
+
+# roc programming language
+export PATH=$PATH:~/roc
+
+# zig programming language
+export PATH=$PATH:~/zig
