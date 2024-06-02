@@ -29,7 +29,6 @@ require("mason-tool-installer").setup({
 		"pylint",
 		"pyright",
 		"rust-analyzer",
-		"rustfmt",
 		"stylua",
 		"tailwindcss-language-server",
 		"typescript-language-server",
