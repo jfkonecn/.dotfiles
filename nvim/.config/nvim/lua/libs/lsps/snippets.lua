@@ -3,7 +3,7 @@
 local luasnip = require("luasnip")
 local s = luasnip.snippet
 --local sn = luasnip.snippet_node
-local t = luasnip.text_node
+--local t = luasnip.text_node
 --local i = luasnip.insert_node
 local f = luasnip.function_node
 --local c = luasnip.choice_node
@@ -13,20 +13,8 @@ local f = luasnip.function_node
 luasnip.add_snippets("markdown", {
 	s("journal template", {
 		f(function()
-			return os.date("# %Y-%m-%d")
+			return { os.date("# %Y-%m-%d"), "", "## Meetings", "", "### Standup", "", "## Tasks" }
 		end),
-		t({
-			"",
-			"## Questions",
-			"",
-			"## Reminders",
-			"",
-			"## Meetings",
-			"",
-			"### Standup",
-			"",
-			"## Tasks",
-		}),
 	}),
 })
 
@@ -46,6 +34,10 @@ cmp.setup({
 		["<C-f>"] = cmp.mapping.scroll_docs(4),
 		["<C-Space>"] = cmp.mapping.complete(),
 		["<CR>"] = cmp.mapping.confirm({
+			behavior = cmp.ConfirmBehavior.Insert,
+			select = true,
+		}),
+		["<Tab>"] = cmp.mapping.confirm({
 			behavior = cmp.ConfirmBehavior.Replace,
 			select = true,
 		}),
