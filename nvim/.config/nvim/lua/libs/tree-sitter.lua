@@ -29,6 +29,7 @@ require("nvim-treesitter.configs").setup({
 		"gomod",
 		"kotlin",
 		"roc",
+		"asm",
 	},
 })
 

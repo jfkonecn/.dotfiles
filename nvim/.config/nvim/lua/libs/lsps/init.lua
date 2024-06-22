@@ -23,6 +23,7 @@ require("libs.lsps.kotlin")
 require("libs.lsps.ltex")
 require("libs.lsps.xml")
 require("libs.lsps.roc")
+require("libs.lsps.asm")
 
 local telescopeBuiltin = require("telescope.builtin")
 vim.api.nvim_create_autocmd("LspAttach", {

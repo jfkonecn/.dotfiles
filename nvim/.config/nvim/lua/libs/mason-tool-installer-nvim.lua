@@ -43,6 +43,7 @@ require("mason-tool-installer").setup({
 		"ktlint",
 		"ruff-lsp",
 		"basedpyright",
+		"asm-lsp",
 	},
 	auto_update = true,
 })
