@@ -323,27 +323,27 @@ echo '{ "venvPath": ".", "venv": ".venv" }' > pyrightconfig.json
 
 ### C\#
 
-```lua
-require("dap")..configurations.cs = {
-	{
-		type = "coreclr",
-		name = "launch - netcoredbg",
-		request = "launch",
-		program = "${workspaceFolder}/CSharpPlayground.Console/bin/Debug/net6.0/CSharpPlayground.Console.dll",
-	},
-}
+    ```lua
+    require("dap").configurations.cs = {
+        {
+            type = "coreclr",
+            name = "launch - netcoredbg",
+            request = "launch",
+            program = "${workspaceFolder}/CSharpPlayground.Console/bin/Debug/net6.0/CSharpPlayground.Console.dll",
+        },
+    }
 
-require("dap").configurations.java = {
-	{
-		projectName = "java-playground",
-		mainClass = "com.advent.of.code.App",
-		name = "Launch Java Playground",
-		request = "launch",
-		type = "java",
-	},
-}
+    require("dap").configurations.java = {
+        {
+            projectName = "java-playground",
+            mainClass = "com.advent.of.code.App",
+            name = "Launch Java Playground",
+            request = "launch",
+            type = "java",
+        },
+    }
 
-```
+    ```
 
 ## HTTP
 
