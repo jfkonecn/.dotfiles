@@ -187,3 +187,7 @@ export PATH=$PATH:~/roc
 
 # zig programming language
 export PATH=$PATH:~/zig
+
+# Set up fzf key bindings and fuzzy completion
+# Do COMMAND [DIRECTORY/][FUZZY_PATTERN]**<TAB>
+eval "$(fzf --zsh)"
