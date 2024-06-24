@@ -399,3 +399,33 @@ Percentage Scrolling:
 
 50%: Jumps to the line at the given percentage of the document (in this case, 50%).
 These commands can significantly enhance your navigation efficiency within your documents in NeoVim. It's worth experimenting with them to see which ones best fit your workflow.
+
+## Git Merge Conflict
+
+View locations of merge conflicts
+
+    ```vim
+    :Git mergetool
+    ```
+
+Open up 3 way split viewer
+
+    ```vim
+    :Gvdiffsplit!
+    ```
+
+Left is target branch
+Right is merge branch
+Middle is working copy
+
+Pick a side you want to pull from
+
+    ```vim
+    :diffget <sourceFilePath>
+    ```
+
+Push change from one file to another
+
+    ```vim
+    :diffput <targetFilePath>
+    ```
