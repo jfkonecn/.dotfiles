@@ -16,7 +16,7 @@ Place the appimage file in ~/bin make sure the file name is nvim
 
 ### Requirements
 
-    - neovim 0.9
+    - neovim 0.10
     - [ripgrep](https://github.com/BurntSushi/ripgrep)
     - zig (for windows only)
 
@@ -428,4 +428,10 @@ Push change from one file to another
 
     ```vim
     :diffput <targetFilePath>
+    ```
+
+Close all other windows to return to normal mode
+
+    ```vim
+    <C-W><C-O>
     ```

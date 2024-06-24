@@ -5,6 +5,7 @@ htop
 jpeg
 jq
 librsvg
+libtermkey
 maven
 mysql
 neovim
