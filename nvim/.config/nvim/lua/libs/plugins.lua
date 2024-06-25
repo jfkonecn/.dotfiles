@@ -132,4 +132,6 @@ require("lazy").setup({
 
 	-- AI
 	"David-Kunz/gen.nvim",
+
+	"tpope/vim-rhubarb",
 })

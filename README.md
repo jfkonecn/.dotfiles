@@ -49,7 +49,9 @@
    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
    ```
 
-9. (Optional) add .gitconfig-work for git work email
+9. Follow [.netrc config](https://github.com/tpope/vim-rhubarb) instructions to
+   use GBrowse through fugitive.
+10. (Optional) add .gitconfig-work for git work email
 
 ### Mac
 
