@@ -46,6 +46,7 @@ require("lazy").setup({
 
 	-- git manager
 	"tpope/vim-fugitive",
+	"lewis6991/gitsigns.nvim",
 
 	--{
 	--"folke/trouble.nvim",

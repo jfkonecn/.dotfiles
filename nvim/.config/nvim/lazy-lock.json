@@ -7,6 +7,7 @@
   "cspell.nvim": { "branch": "main", "commit": "508b64a23bd8f9473c59d083a92712486f6f138d" },
   "friendly-snippets": { "branch": "main", "commit": "682157939e57bd6a2c86277dfd4d6fbfce63dbac" },
   "gen.nvim": { "branch": "main", "commit": "b1230ce2993b2be38a1e22606750d05a94307380" },
+  "gitsigns.nvim": { "branch": "main", "commit": "fa42613096ebfa5fee1ea87d70f8625ab9685d01" },
   "harpoon": { "branch": "harpoon2", "commit": "0378a6c428a0bed6a2781d459d7943843f374bce" },
   "lazy.nvim": { "branch": "main", "commit": "77edda11bf82864585875cecb0c370e31bb06a85" },
   "lualine.nvim": { "branch": "master", "commit": "0a5a66803c7407767b799067986b4dc3036e1983" },
