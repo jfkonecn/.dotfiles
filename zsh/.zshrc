@@ -143,16 +143,16 @@ export PATH="$PATH:$HOME/bin"
 
 if [[ $(uname) == "Darwin" ]]; then
     export PATH="/opt/homebrew/bin:$PATH"
-    export JAVA_HOME=/usr/local/opt/openjdk
+    export JAVA_HOME=/opt/homebrew/opt/openjdk
     #alias j8="export JAVA_HOME=/usr/local/opt/openjdk@8 ; java -version"
-    alias j8="export JAVA_HOME=/Users/konecnyj/Library/Java/JavaVirtualMachines/temurin-1.8.0_402/Contents/Home
+    alias j8="export JAVA_HOME=$HOME/Library/Java/JavaVirtualMachines/temurin-1.8.0_402/Contents/Home
  ; java -version"
     #alias j11="export JAVA_HOME=/usr/local/opt/openjdk@11 ; java -version"
-    alias j11="export JAVA_HOME=/Users/konecnyj/Library/Java/JavaVirtualMachines/temurin-11.0.22/Contents/Home
+    alias j11="export JAVA_HOME=$HOME/Library/Java/JavaVirtualMachines/temurin-11.0.22/Contents/Home
  ; java -version"
     #alias j17="export JAVA_HOME=/usr/local/opt/openjdk@17 ; java -version"
     #alias j20="export JAVA_HOME=/usr/local/opt/openjdk@20 ; java -version"
-    alias j22="export JAVA_HOME=/Users/konecnyj/Library/Java/JavaVirtualMachines/temurin-22/Contents/Home ; java -version"
+    alias j22="export JAVA_HOME=$HOME/Library/Java/JavaVirtualMachines/temurin-22/Contents/Home ; java -version"
 fi
 if [[ $(uname) == "Linux" ]]; then
     export JAVA_HOME=/usr/lib/jvm/default
