@@ -190,4 +190,10 @@ export PATH=$PATH:~/zig
 
 # Set up fzf key bindings and fuzzy completion
 # Do COMMAND [DIRECTORY/][FUZZY_PATTERN]**<TAB>
-eval "$(fzf --zsh)"
+#
+#
+fzfVersion=$(fzf --version | awk '{print $1}')
+
+if [[ ! -z "$fzfVersion" && "$fzfVersion" -gt "0.48" ]]; then
+    eval "$(fzf --zsh)"
+fi
