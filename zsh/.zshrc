@@ -190,10 +190,9 @@ export PATH=$PATH:~/zig
 
 # Set up fzf key bindings and fuzzy completion
 # Do COMMAND [DIRECTORY/][FUZZY_PATTERN]**<TAB>
+# Need v0.48 or better
 #
-#
-fzfVersion=$(fzf --version | awk '{print $1}')
 
-if [[ ! -z "$fzfVersion" && "$fzfVersion" -gt "0.48" ]]; then
+if [[ $(uname) == "Darwin" ]]; then
     eval "$(fzf --zsh)"
 fi
