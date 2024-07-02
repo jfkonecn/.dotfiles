@@ -18,14 +18,24 @@
 local null_ls = require("null-ls")
 local cspell = require("cspell")
 
+local formatOnSave = true
+
+local toggleFormatOnSave = function()
+	formatOnSave = not formatOnSave
+end
+
+vim.api.nvim_create_user_command("ToggleFormatOnSave", toggleFormatOnSave, {})
+
 local lsp_formatting = function(bufnr)
-	vim.lsp.buf.format({
-		filter = function(client)
-			-- apply whatever logic you want (in this example, we'll only use null-ls)
-			return client.name == "null-ls"
-		end,
-		bufnr = bufnr,
-	})
+	if formatOnSave then
+		vim.lsp.buf.format({
+			filter = function(client)
+				-- apply whatever logic you want (in this example, we'll only use null-ls)
+				return client.name == "null-ls"
+			end,
+			bufnr = bufnr,
+		})
+	end
 end
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
