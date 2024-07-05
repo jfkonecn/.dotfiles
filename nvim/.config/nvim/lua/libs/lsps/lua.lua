@@ -17,6 +17,9 @@ require("lspconfig").lua_ls.setup({
 			telemetry = {
 				enable = false,
 			},
+			hint = {
+				enable = true,
+			},
 		},
 	},
 	flags = require("libs.lsps.utils").lsp_flags,

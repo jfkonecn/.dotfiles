@@ -25,6 +25,13 @@ require("libs.lsps.xml")
 require("libs.lsps.roc")
 require("libs.lsps.asm")
 
+vim.lsp.inlay_hint.enable()
+vim.api.nvim_create_user_command("EnableInlayHints", ":lua vim.lsp.inlay_hint.enable()<CR>", {})
+vim.api.nvim_create_user_command(
+	"ToggleInlayHints",
+	":lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<CR>",
+	{}
+)
 local telescopeBuiltin = require("telescope.builtin")
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(args)
