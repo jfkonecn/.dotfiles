@@ -161,6 +161,8 @@ if [[ $(uname) == "Linux" ]]; then
     alias j17="export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64 ; java -version"
     alias j20="export JAVA_HOME=/usr/lib/jvm/java-20-openjdk-amd64 ; java -version"
     export GCM_CREDENTIAL_STORE="secretservice"
+    alias pbcopy='xclip -selection clipboard'
+    alias pbpaste='xclip -selection clipboard -o'
 fi
 
 alias start-tmux="~/.local/scripts/tmux-sessionizer.sh"
