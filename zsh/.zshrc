@@ -185,7 +185,7 @@ unset __conda_setup
 alias ai='ollama run llama3'
 
 alias format-json='python3 -m json.tool'
-alias search-json='python3 -m json.tool | less -I'
+alias search-json='python3 -m json.tool | less -NI'
 
 # roc programming language
 export PATH=$PATH:~/roc
