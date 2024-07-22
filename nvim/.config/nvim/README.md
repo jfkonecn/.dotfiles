@@ -297,7 +297,7 @@ Add .nvim.lua file to your repo
 
 ### Snippets
 
-[Disable formatting](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/SOURCES.md#disablequery)
+[Disable formatting](https://github.com/nvimtools/none-ls.nvim/blob/main/doc/SOURCES.md#disablequery)
 
 ```lua
 require("null-ls").disable({
@@ -306,6 +306,21 @@ require("null-ls").disable({
 })
 
 vim.lsp.buf.format({ timeout_ms = 2000 })
+
+```
+
+[Enable a different source](https://github.com/nvimtools/none-ls.nvim/blob/main/doc/SOURCES.md)
+
+```lua
+local null_ls = require("null-ls")
+
+local java_prettier = null_ls.builtins.formatting.prettier.with({
+	name = "prettier_java",
+	filetypes = { "java" },
+})
+
+null_ls.disable({ name = "google_java_format" })
+null_ls.register(java_prettier)
 
 ```
 
