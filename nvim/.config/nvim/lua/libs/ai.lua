@@ -1,5 +1,5 @@
 require("gen").setup({
-	model = "llama3",
+	model = "llama3.1",
 })
 
 require("gen").prompts["Explain_Code"] = {
