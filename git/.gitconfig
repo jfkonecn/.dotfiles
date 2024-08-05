@@ -10,6 +10,8 @@
 	defaultBranch = main
 [includeIf "gitdir:~/oss/"]
     path = ~/.gitconfig-oss
+[include]
+    path = ~/.extend.gitconfig-oss
 [includeIf "gitdir:~/.dotfiles/"]
     path = ~/.gitconfig-oss
 [includeIf "gitdir:~/work/"]
