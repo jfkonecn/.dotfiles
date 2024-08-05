@@ -92,6 +92,6 @@ Update `~/.extend.gitconfig-oss` with the signing key value
 
 ```gitconfig
 [user]
-	signingkey = XXXXXXXXXXXXXXXX
+    signingkey = XXXXXXXXXXXXXXXX
 
 ```
