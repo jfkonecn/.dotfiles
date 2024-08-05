@@ -83,3 +83,15 @@ xargs brew install < my_brew.txt
 ```sh
 brew leaves > my_brew.txt
 ```
+
+## Sign Git Commit
+
+[Create a GPG key](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key)
+
+Update `~/.extend.gitconfig-oss` with the signing key value
+
+```gitconfig
+[user]
+	signingkey = XXXXXXXXXXXXXXXX
+
+```
