@@ -67,6 +67,7 @@ null_ls.setup({
 		null_ls.builtins.formatting.isort,
 		null_ls.builtins.formatting.black,
 		null_ls.builtins.formatting.csharpier,
+		null_ls.builtins.formatting.roc_format,
 		require("none-ls.formatting.rustfmt"),
 		null_ls.builtins.formatting.clang_format.with({
 			filetypes = { "c", "cpp", "objc", "objcpp" },
@@ -102,3 +103,32 @@ null_ls.setup({
 		end
 	end,
 })
+
+local h = require("null-ls.helpers")
+local methods = require("null-ls.methods")
+
+local FORMATTING = methods.internal.FORMATTING
+
+local roc_format = h.make_builtin({
+	name = "roc_format",
+	meta = {
+		url = "https://github.com/roc-lang/roc",
+		description = "Formats Roc programs.",
+		notes = {},
+	},
+	method = FORMATTING,
+	filetypes = { "roc" },
+	generator_opts = {
+		command = "roc",
+		args = {
+			"format",
+			"--stdin",
+			"--stdout",
+			--"$FILENAME",
+		},
+		to_stdin = true,
+	},
+	factory = h.formatter_factory,
+})
+
+null_ls.register(roc_format)
