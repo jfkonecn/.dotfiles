@@ -67,7 +67,6 @@ null_ls.setup({
 		null_ls.builtins.formatting.isort,
 		null_ls.builtins.formatting.black,
 		null_ls.builtins.formatting.csharpier,
-		null_ls.builtins.formatting.roc_format,
 		require("none-ls.formatting.rustfmt"),
 		null_ls.builtins.formatting.clang_format.with({
 			filetypes = { "c", "cpp", "objc", "objcpp" },
