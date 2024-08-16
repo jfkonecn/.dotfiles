@@ -203,3 +203,5 @@ export PATH=$PATH:~/zig
 if [[ $(uname) == "Darwin" ]]; then
     eval "$(fzf --zsh)"
 fi
+
+alias gcfzf='git checkout $(git branch | fzf)'
