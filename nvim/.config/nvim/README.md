@@ -64,6 +64,13 @@ check if %USERPROFILE%\scoop\apps\zig\0.10.1 is in your path
 
 ## Commands I forget
 
+    Change List
+    ```
+    :changes.
+    g; (go to older change),
+    g, (go to newer change).
+    ```
+
 Debug Plugins
 
     ```
