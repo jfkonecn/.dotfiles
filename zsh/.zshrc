@@ -188,7 +188,7 @@ alias ai='ollama run llama3'
 
 alias format-json='python3 -m json.tool'
 alias search-json='python3 -m json.tool | less -NI'
-alias find-string-json="~/.local/scripts/find-string-json.sh $1"
+alias find-string-json="$HOME/.local/scripts/find-string-json.sh $1"
 
 
 # roc programming language
@@ -207,3 +207,5 @@ if [[ $(uname) == "Darwin" ]]; then
 fi
 
 alias gcfzf='git checkout $(git branch | fzf)'
+
+[[ ! -f "$HOME/extends.sh" ]] || source "$HOME/extends.sh"
