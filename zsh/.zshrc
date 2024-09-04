@@ -188,6 +188,8 @@ alias ai='ollama run llama3'
 
 alias format-json='python3 -m json.tool'
 alias search-json='python3 -m json.tool | less -NI'
+alias find-string-json="~/.local/scripts/find-string-json.sh $1"
+
 
 # roc programming language
 export PATH=$PATH:~/roc
