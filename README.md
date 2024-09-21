@@ -10,7 +10,6 @@
    - xclip
    - git
    - fzf
-   - [tmuxifier](https://github.com/jimeh/tmuxifier)
    - stow
    - A [nerd font](https://www.nerdfonts.com/) or use one in the fonts folder
      - Set this font for your terminal
