@@ -2,8 +2,15 @@ local utils = require("libs.utils")
 
 local path_to_jdtls = utils.concat_paths(utils.mason_path, "bin", "jdtls")
 
+local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
+
+local base_cache_dir = vim.fn.stdpath("cache") .. "/jdtls/"
+local workspace_dir = base_cache_dir .. project_name .. "/config"
+
+-- java language server cache location
+-- https://www.lazyvim.org/extras/lang/java
 local config = {
-	cmd = { path_to_jdtls },
+	cmd = { path_to_jdtls, "-data", workspace_dir },
 	root_dir = vim.fs.dirname(vim.fs.find({ "gradlew", ".git", "mvnw" }, { upward = true })[1]),
 }
 
