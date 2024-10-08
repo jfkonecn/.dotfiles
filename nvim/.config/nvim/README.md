@@ -457,3 +457,47 @@ Close all other windows to return to normal mode
     ```vim
     <C-W><C-O>
     ```
+
+## [Marks](https://www.youtube.com/watch?v=XT_kFia3Ua4)
+
+To make a mark do this (Upper Case marks are global lower case is scoped to a file)
+
+    ```vim
+    m<letter>
+    ma
+    mb
+    ```
+
+To go to a marked row
+
+    ```vim
+    '<letter>
+    'a
+    'b
+    ```
+
+To go to the marked row and column
+
+    ```vim
+    `<letter>
+    `a
+    `b
+    ```
+
+List marks
+
+    ```vim
+    marks
+    marks abc
+    ```
+
+Delete marks
+
+    ```vim
+    # delete mark
+    delm a-c
+    # delete all lower case marks
+    delma!
+    # delete all marks
+    :delmarks A-Z0-9
+    ```

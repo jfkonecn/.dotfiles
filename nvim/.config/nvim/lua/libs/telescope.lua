@@ -88,7 +88,7 @@ vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>fr", builtin.registers, {})
 vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
-vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
+vim.keymap.set("n", "<leader>fm", builtin.marks, {})
 vim.keymap.set("n", "z=", builtin.spell_suggest, {})
 vim.api.nvim_set_keymap(
 	"n",
