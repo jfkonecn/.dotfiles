@@ -365,6 +365,17 @@ echo '{ "venvPath": ".", "venv": ".venv" }' > pyrightconfig.json
         },
     }
 
+    require("dap").configurations.go = {
+        {
+            type = "go",
+            name = "Debug",
+            request = "launch",
+            program = "......./src/main.go", -- Current file
+            args = { "arg1", "arg2", "arg3" }, -- Arguments to pass to the program
+            cwd = "${workspaceFolder}", -- Set working directory
+            env = { MY_ENV_VAR = "value" },
+        },
+    }
     ```
 
 ## HTTP
