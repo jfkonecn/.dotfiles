@@ -192,10 +192,13 @@ alias find-string-json="$HOME/.local/scripts/find-string-json.sh $1"
 
 
 # roc programming language
-export PATH=$PATH:~/roc
+export PATH=$PATH:$HOME/roc
 
 # zig programming language
-export PATH=$PATH:~/zig
+export PATH=$PATH:$HOME/zig
+
+# zig go binaries
+export PATH=$PATH:$HOME/go/bin
 
 # Set up fzf key bindings and fuzzy completion
 # Do COMMAND [DIRECTORY/][FUZZY_PATTERN]**<TAB>

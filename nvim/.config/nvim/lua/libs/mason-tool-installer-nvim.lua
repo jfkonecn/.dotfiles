@@ -33,9 +33,6 @@ require("mason-tool-installer").setup({
 		"tailwindcss-language-server",
 		"typescript-language-server",
 		"gopls",
-		"gofumpt",
-		"goimports-reviser",
-		"golines",
 		"delve",
 		"lemminx",
 		"kotlin-debug-adapter",
@@ -44,6 +41,8 @@ require("mason-tool-installer").setup({
 		"ruff-lsp",
 		"basedpyright",
 		"asm-lsp",
+		"goimports",
+		"golangci-lint",
 	},
 	auto_update = true,
 })
