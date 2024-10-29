@@ -11,3 +11,13 @@ sudo apt install i3
 ```bash
 sudo apt install i3lock
 ```
+
+## Fix Gnome Desktop
+
+Add to you `.zshrc` script
+
+```sh
+#!/bin/bash
+
+export XDG_CURRENT_DESKTOP=GNOME
+```
