@@ -512,3 +512,9 @@ Delete marks
     # delete all marks
     :delmarks A-Z0-9
     ```
+
+Auto complete for folder paths
+
+    ```vim
+    <C-x><C-f>
+    ```
