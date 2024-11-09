@@ -35,7 +35,8 @@ vim.api.nvim_create_user_command(
 local telescopeBuiltin = require("telescope.builtin")
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(args)
-		-- check if markdown file
+		local file_extension = vim.fn.expand("%:e")
+
 		local bufnr = args.buf
 		vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
@@ -52,8 +53,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set("n", "gh", vim.lsp.buf.hover, bufopts)
 		vim.keymap.set("n", "gs", telescopeBuiltin.lsp_document_symbols, bufopts)
 		vim.keymap.set("n", "gS", telescopeBuiltin.lsp_workspace_symbols, bufopts)
-		vim.keymap.set("n", "g.", vim.lsp.buf.code_action, bufopts)
-		vim.keymap.set("v", "g.", vim.lsp.buf.code_action, bufopts)
+		vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, bufopts)
+		vim.keymap.set("v", "<leader>ca", vim.lsp.buf.code_action, bufopts)
 		vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, bufopts)
 		vim.keymap.set("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, bufopts)
 		vim.keymap.set("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, bufopts)
