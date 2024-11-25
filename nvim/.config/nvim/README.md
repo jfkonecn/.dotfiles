@@ -518,3 +518,30 @@ Auto complete for folder paths
     ```vim
     <C-x><C-f>
     ```
+
+## Pasting Issues
+
+When you paste text into Neovim on a Mac, and it results in a "diagonal"
+alignment with extra tabs or spaces, it's often due to Neovim's autoindent
+feature being active during the paste operation. Neovim attempts to autoindent
+each line based on the previous one, causing unwanted behavior when pasting
+preformatted text.
+
+Use Paste Mode: Neovim has a "paste mode" that disables autoindent and other formatting features while pasting.
+
+Enter paste mode before pasting:
+vim
+Copy code
+
+```vim
+:set paste
+```
+
+Paste your text from the clipboard.
+Disable paste mode afterward:
+vim
+Copy code
+
+```vim
+:set nopaste
+```
