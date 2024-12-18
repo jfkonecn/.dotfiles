@@ -4,23 +4,19 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strings"
-)
 
-func toTitleCase(input string) string {
-	words := strings.Fields(input)
-	for i, word := range words {
-		words[i] = strings.Title(strings.ToLower(word))
-	}
-	return strings.Join(words, " ")
-}
+	"golang.org/x/text/cases"
+	"golang.org/x/text/language"
+)
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 
+	c := cases.Title(language.English)
+
 	for scanner.Scan() {
 		line := scanner.Text()
-		fmt.Println(toTitleCase(line))
+		fmt.Println(c.String(line))
 	}
 
 	if err := scanner.Err(); err != nil {
