@@ -2,7 +2,7 @@
 
 SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
 
-BINARIES=("title-case")
+BINARIES=("title-case" "wrap-text")
 
 TARGET_DIR="$HOME/bin"
 
