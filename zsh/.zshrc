@@ -200,6 +200,9 @@ export PATH=$PATH:$HOME/zig
 # zig go binaries
 export PATH=$PATH:$HOME/go/bin
 
+export PATH=$PATH:$HOME/oss/ghostty/zig-out/bin
+
+
 # Set up fzf key bindings and fuzzy completion
 # Do COMMAND [DIRECTORY/][FUZZY_PATTERN]**<TAB>
 # Need v0.48 or better
