@@ -3,4 +3,4 @@
 --require("lspconfig").pyright.setup({})
 require("lspconfig").basedpyright.setup({})
 
-require("lspconfig").ruff_lsp.setup({})
+require("lspconfig").ruff.setup({})

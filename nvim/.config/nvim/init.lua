@@ -1,6 +1,8 @@
 -- :options  // gives all config options
 -- so % // loads script
 --
+-- gut-signs was sad with this disabled
+vim.opt.termguicolors = true
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
@@ -34,7 +36,6 @@ require("libs.dap.init")
 require("libs.diagnostic")
 require("libs.telescope")
 require("libs.noice")
-require("libs.theme")
 require("libs.status-line")
 require("libs.nerd-commenter")
 require("libs.undotree")
