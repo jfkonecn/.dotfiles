@@ -36,6 +36,9 @@ require("lazy").setup({
 	--"beauwilliams/statusline.lua",
 	"nvim-lualine/lualine.nvim",
 
+	-- theme
+	"navarasu/onedark.nvim",
+
 	-- is a parser generator tool and an incremental parsing library
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 	"nvim-treesitter/nvim-treesitter-context",
