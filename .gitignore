@@ -6,3 +6,4 @@ nvim/.config/nvim/spell/
 bin/.local/
 !bin/.local/scripts/tmux-sessionizer.sh
 !bin/.local/scripts/find-string-json.sh
+db/

@@ -14,3 +14,18 @@ go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
 ```sh
 go install golang.org/x/tools/cmd/goimports@latest
 ```
+
+- Install Dependencies
+
+```sh
+go mod tidy
+```
+
+- [Install Ollama](https://ollama.com/download)
+
+Download the two models:
+
+```sh
+ollama pull gemma:2b
+ollama pull nomic-embed-text
+```
