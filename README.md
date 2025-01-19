@@ -89,8 +89,31 @@ brew leaves > my_brew.txt
 
 Update `~/.extend.gitconfig-oss` with the signing key value
 
+```sh
+gpg --full-generate-key
+```
+
+```sh
+gpg --list-secret-keys --keyid-format=long
+```
+
+```sh
+sec   rsa2048/KKKKKKKKKKKKKKKK 2017-12-16 [SC]
+      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+uid                 [ xxxxxxx] Your Name <your-email@example.com>
+ssb   rsa2048/XXXXXXXXXXXXXXXX 2017-12-16 [E]
+```
+
+KKKKKKKKKKKKKKKK is your secret key.
+
 ```gitconfig
 [user]
     signingkey = XXXXXXXXXXXXXXXX
 
+```
+
+### WSL
+
+```sh
+export GPG_TTY=$(tty)
 ```
