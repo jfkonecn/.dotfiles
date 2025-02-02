@@ -24,6 +24,7 @@ require("libs.lsps.ltex")
 require("libs.lsps.xml")
 require("libs.lsps.roc")
 require("libs.lsps.asm")
+require("libs.lsps.zig")
 
 vim.api.nvim_create_user_command("EnableInlayHints", ":lua vim.lsp.inlay_hint.enable(true)<CR>", {})
 vim.api.nvim_create_user_command("DisableInlayHints", ":lua vim.lsp.inlay_hint.enable(false)<CR>", {})

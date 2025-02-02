@@ -43,6 +43,7 @@ require("mason-tool-installer").setup({
 		"asm-lsp",
 		"goimports",
 		"golangci-lint",
+		"zls",
 	},
 	auto_update = true,
 })
