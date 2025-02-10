@@ -10,6 +10,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/jfkonecn/.dotfiles/gobins/internal/llm"
 	"github.com/philippgille/chromem-go"
 )
 
@@ -31,13 +32,13 @@ func main() {
 
 	// Warm up Ollama, in case the model isn't loaded yet
 	log.Println("Warming up Ollama...")
-	_ = askLLM(ctx, nil, "Hello!")
+	_ = llm.AskLLM(ctx, nil, "Hello!")
 
 	// First we ask an LLM a fairly specific question that it likely won't know
 	// the answer to.
 	log.Println("Question: " + question)
 	log.Println("Asking LLM...")
-	reply := askLLM(ctx, nil, question)
+	reply := llm.AskLLM(ctx, nil, question)
 	log.Printf("Initial reply from the LLM: \"" + reply + "\"\n")
 
 	// Now we use our vector database for retrieval augmented generation (RAG),
@@ -125,8 +126,8 @@ func main() {
 	// In this example we just use both retrieved documents as context.
 	contexts := []string{docRes[0].Content, docRes[1].Content}
 	log.Println("Asking LLM with augmented question...")
-	reply = askLLM(ctx, contexts, question)
-	log.Printf("Reply after augmenting the question with knowledge: \"" + reply + "\"\n")
+	reply = llm.AskLLM(ctx, contexts, question)
+	log.Printf("Reply after augmenting the question with knowledge: \"%s\"\n", reply)
 
 	/* Output (can differ slightly on each run):
 	2024/03/02 20:02:30 Warming up Ollama...

@@ -13,7 +13,7 @@ if [ ! -d "$TARGET_DIR" ]; then
 fi
 
 # Find all .go files under go-bins/cmd/** and iterate over them
-find "$SCRIPT_DIR/go-bins/cmd" -type f -name "*.go" | while read -r GO_FILE; do
+find "$SCRIPT_DIR/gobins/cmd" -type f -name "*.go" | while read -r GO_FILE; do
   BINARY_NAME=$(basename "${GO_FILE%.*}") # Extract the binary name without extension
 
   echo "Building the $BINARY_NAME binary..."

@@ -1,4 +1,4 @@
-package main
+package llm
 
 import (
 	"context"
@@ -45,7 +45,7 @@ Anything between the following 'context' XML blocks is retrieved from the knowle
 Don't mention the knowledge base, context or search results in your answer.
 `))
 
-func askLLM(ctx context.Context, contexts []string, question string) string {
+func AskLLM(ctx context.Context, contexts []string, question string) string {
 	// We can use the OpenAI client because Ollama is compatible with OpenAI's API.
 	openAIClient := openai.NewClientWithConfig(openai.ClientConfig{
 		BaseURL:    ollamaBaseURL,
