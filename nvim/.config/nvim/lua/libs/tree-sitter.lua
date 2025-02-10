@@ -30,6 +30,7 @@ require("nvim-treesitter.configs").setup({
 		"kotlin",
 		"roc",
 		"asm",
+		"zig",
 	},
 })
 
