@@ -239,7 +239,6 @@ Debug Plugins
     ◍ prettier
     ◍ prisma-language-server
     ◍ pylint
-    ◍ rustfmt
     ◍ stylua
     ◍ tailwindcss-language-server
 
