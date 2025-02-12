@@ -13,7 +13,7 @@ local f = luasnip.function_node
 luasnip.add_snippets("markdown", {
 	s("journal template", {
 		f(function()
-			return { os.date("# %Y-%m-%d"), "", "## Meetings", "", "### Standup", "", "## Tasks" }
+			return { os.date("# %Y-%m-%d"), "", "## Meetings", "", "## Tasks" }
 		end),
 	}),
 })
