@@ -24,3 +24,10 @@ vim.opt.spelllang = "en_us"
 vim.opt.spell = true
 
 vim.opt.pumheight = 10
+
+vim.filetype.add({
+	filename = {
+		["yabairc"] = "sh",
+		["skhdrc"] = "sh",
+	},
+})
