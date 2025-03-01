@@ -152,3 +152,22 @@ local rust_format = h.make_builtin({
 })
 
 null_ls.register(rust_format)
+
+local fantoms_format = h.make_builtin({
+	name = "fantomas",
+	meta = {
+		url = "https://github.com/fsprojects/fantomas",
+		description = "FSharp source code formatter.",
+	},
+	method = FORMATTING,
+	filetypes = { "fsharp" },
+	generator_opts = {
+		command = "fantomas",
+		args = { "$FILENAME" },
+		to_temp_file = true,
+		from_temp_file = true,
+	},
+	factory = h.formatter_factory,
+})
+
+null_ls.register(fantoms_format)

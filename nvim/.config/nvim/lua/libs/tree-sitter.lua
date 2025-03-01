@@ -31,6 +31,7 @@ require("nvim-treesitter.configs").setup({
 		"roc",
 		"asm",
 		"zig",
+		"fsharp",
 	},
 })
 

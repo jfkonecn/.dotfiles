@@ -44,6 +44,8 @@ require("mason-tool-installer").setup({
 		"goimports",
 		"golangci-lint",
 		"zls",
+		"fsautocomplete",
+		"fantomas",
 	},
 	auto_update = true,
 })
