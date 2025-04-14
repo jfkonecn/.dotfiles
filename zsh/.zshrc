@@ -165,6 +165,7 @@ if [[ $(uname) == "Linux" ]]; then
     export GCM_CREDENTIAL_STORE="secretservice"
     alias pbcopy='xclip -selection clipboard'
     alias pbpaste='xclip -selection clipboard -o'
+    alias say='espeak'
 fi
 
 alias start-tmux="~/.local/scripts/tmux-sessionizer.sh"
