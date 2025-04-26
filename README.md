@@ -116,7 +116,9 @@ KKKKKKKKKKKKKKKK is your secret key.
 gpg --armor --export KKKKKKKKKKKKKKKK
 ```
 
-### WSL
+### When signing "gpg: signing failed: Inappropriate ioctl for device"
+
+Add to your .zshrc file
 
 ```sh
 export GPG_TTY=$(tty)
