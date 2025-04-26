@@ -128,28 +128,25 @@ export GPG_TTY=$(tty)
 
 1. Create the Key
 
-    ```sh
-     ssh-keygen -t ed25519 -C "24961694+jfkonecn@users.noreply.github.com"
-    ```
+   ```sh
+    ssh-keygen -t ed25519 -C "24961694+jfkonecn@users.noreply.github.com"
+   ```
 
 2. Start SSH agent
 
-    ```sh
-    eval "$(ssh-agent -s)"
-    ```
+   ```sh
+   eval "$(ssh-agent -s)"
+   ```
 
 3. Add the key
 
-    ```sh
-    ssh-add ~/.ssh/id_ed25519
-    ```
+   ```sh
+   ssh-add ~/.ssh/id_ed25519
+   ```
 
 4. Copy the Key to github
 
-    ```sh
-    # This prints the key
-    cat ~/.ssh/id_ed25519.pub
-    ```
-
-
-
+   ```sh
+   # This prints the key
+   cat ~/.ssh/id_ed25519.pub
+   ```
