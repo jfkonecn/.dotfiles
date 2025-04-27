@@ -1,9 +1,3 @@
--- copilot is dumb and will ignore these setting if they're called after initialization
-vim.g.copilot_no_tab_map = true
-vim.g.copilot_assume_mapped = true
--- disable by default
-vim.g.copilot_enabled = false
-
 require("lazy").setup({
 
 	"folke/neodev.nvim",
@@ -76,8 +70,6 @@ require("lazy").setup({
 
 	-- comment out lines
 	"preservim/nerdcommenter",
-
-	"github/copilot.vim",
 
 	"christoomey/vim-tmux-navigator",
 
