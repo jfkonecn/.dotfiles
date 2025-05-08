@@ -21,3 +21,23 @@ Add to you `.zshrc` script
 
 export XDG_CURRENT_DESKTOP=GNOME
 ```
+
+## Monitor Fun
+
+### List Monitors
+
+```sh
+xrandr
+```
+
+### Rotate Screen
+
+```sh
+xrandr --output <monitor-name> --rotate <left|right> --auto
+```
+
+### Multiple Monitors
+
+```sh
+xrandr --output <monitor-name> --auto --right-of <monitor-name>
+```
