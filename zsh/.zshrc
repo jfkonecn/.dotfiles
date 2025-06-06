@@ -154,6 +154,7 @@ if [[ $(uname) == "Darwin" ]]; then
  ; java -version"
     #alias j17="export JAVA_HOME=/usr/local/opt/openjdk@17 ; java -version"
     #alias j20="export JAVA_HOME=/usr/local/opt/openjdk@20 ; java -version"
+    alias j21="export JAVA_HOME=$HOME/Library/Java/JavaVirtualMachines/temurin-21.0.7/Contents/Home ; java -version"
     alias j22="export JAVA_HOME=$HOME/Library/Java/JavaVirtualMachines/temurin-22/Contents/Home ; java -version"
 fi
 if [[ $(uname) == "Linux" ]]; then

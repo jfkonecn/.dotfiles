@@ -67,3 +67,5 @@ ctrl + alt - q : yabai -m window --close
 ctrl + alt - q : yabai --stop-service
 # ctrl + alt - s : yabai --start-service
 ctrl + alt - r : yabai --restart-service
+
+shift + alt - o : pbpaste | say
