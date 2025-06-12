@@ -46,6 +46,7 @@ require("mason-tool-installer").setup({
 		"zls",
 		"fsautocomplete",
 		"fantomas",
+		"terraform-ls",
 	},
 	auto_update = true,
 })

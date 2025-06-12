@@ -32,6 +32,7 @@ require("nvim-treesitter.configs").setup({
 		"asm",
 		"zig",
 		"fsharp",
+		"terraform",
 	},
 })
 
