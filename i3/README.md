@@ -41,3 +41,13 @@ xrandr --output <monitor-name> --rotate <left|right> --auto
 ```sh
 xrandr --output <monitor-name> --auto --right-of <monitor-name>
 ```
+
+## Issues
+
+### Chrome won't Update
+
+```sh
+sudo software-properties-gtk
+```
+
+Go to other software and click the checkmark to enable the google source.

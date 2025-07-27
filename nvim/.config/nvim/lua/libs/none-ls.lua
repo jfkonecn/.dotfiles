@@ -171,3 +171,24 @@ local fantoms_format = h.make_builtin({
 })
 
 null_ls.register(fantoms_format)
+
+local zig_format = h.make_builtin({
+	name = "zig_format",
+	meta = {
+		url = "https://github.com/roc-lang/roc",
+		description = "Formats Zig programs.",
+		notes = {},
+	},
+	method = FORMATTING,
+	filetypes = { "zig" },
+	generator_opts = {
+		command = "zig",
+		args = {
+			"fmt",
+			"--stdin",
+		},
+		to_stdin = true,
+	},
+	factory = h.formatter_factory,
+})
+null_ls.register(zig_format)
