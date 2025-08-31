@@ -201,6 +201,7 @@ export PATH=$PATH:$HOME/zig
 
 # zig go binaries
 export PATH=$PATH:$HOME/go/bin
+export PATH=$PATH:/usr/local/go/bin
 
 export PATH=$PATH:$HOME/oss/ghostty/zig-out/bin
 
