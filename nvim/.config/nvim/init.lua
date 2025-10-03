@@ -119,9 +119,6 @@ require("lazy").setup({
 
 	"norcalli/nvim-colorizer.lua",
 
-	-- AI
-	"David-Kunz/gen.nvim",
-
 	"tpope/vim-rhubarb",
 
 	{
@@ -158,6 +155,5 @@ require("libs.status-line")
 require("libs.nerd-commenter")
 require("libs.undotree")
 require("libs.nvim-colorizer")
-require("libs.ai")
 require("libs.git-signs")
 require("libs.bookmarks")
