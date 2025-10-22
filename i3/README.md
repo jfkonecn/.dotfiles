@@ -1,5 +1,11 @@
 # i3
 
+## File Explorer
+
+```sh
+nautilus
+```
+
 ## Install
 
 ```bash
