@@ -32,6 +32,7 @@ return {
 		require("libs.lsps.zig")
 		require("libs.lsps.fsharp")
 		require("libs.lsps.terraform")
+		require("libs.lsps.perl")
 
 		vim.api.nvim_create_user_command("EnableInlayHints", ":lua vim.lsp.inlay_hint.enable(true)<CR>", {})
 		vim.api.nvim_create_user_command("DisableInlayHints", ":lua vim.lsp.inlay_hint.enable(false)<CR>", {})

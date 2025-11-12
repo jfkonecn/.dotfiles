@@ -47,6 +47,7 @@ require("mason-tool-installer").setup({
 		"fsautocomplete",
 		"fantomas",
 		"terraform-ls",
+		"perlnavigator",
 	},
 	auto_update = true,
 })
