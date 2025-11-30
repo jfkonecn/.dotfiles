@@ -57,3 +57,9 @@ sudo software-properties-gtk
 ```
 
 Go to other software and click the checkmark to enable the google source.
+
+## Update Chrome
+
+```sh
+sudo apt --only-upgrade install google-chrome-stable
+```
