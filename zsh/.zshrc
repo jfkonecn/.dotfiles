@@ -191,6 +191,7 @@ alias ai='ollama run llama3'
 alias format-json='jq '.' --color-output'
 alias search-json='jq '.' --color-output | less -NFIRX'
 alias find-string-json="$HOME/.local/scripts/find-string-json.sh $1"
+alias fix-text="$HOME/.local/scripts/fix-text.sh $1"
 
 
 # roc programming language
