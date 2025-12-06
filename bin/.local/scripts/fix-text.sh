@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-MODEL="deepseek-r1"   # Change if needed
+MODEL="gpt-oss"   # Change if needed
 
 usage() {
     echo "Usage: $0 [file]"
