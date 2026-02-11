@@ -141,6 +141,8 @@ require("lazy").setup({
 		-- install jsregexp (optional!).
 		build = "make install_jsregexp",
 	},
+
+	"github/copilot.vim",
 })
 
 require("libs.mason")
