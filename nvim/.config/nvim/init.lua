@@ -142,7 +142,16 @@ require("lazy").setup({
 		build = "make install_jsregexp",
 	},
 
-	"github/copilot.vim",
+	{
+		"github/copilot.vim",
+		config = function()
+			vim.keymap.set("i", "<C-a>", 'copilot#Accept("\\<CR>")', {
+				expr = true,
+				replace_keycodes = false,
+			})
+			vim.g.copilot_no_tab_map = true
+		end,
+	},
 })
 
 require("libs.mason")
