@@ -29,6 +29,6 @@ final="${choice:-$query}"
 
 if [ -n "$final" ]; then
   encoded="$(jq -rn --arg s "$final" '$s|@uri')"
-  "$OPEN_CMD" "https://duckduckgo.com/search?q=$encoded" >/dev/null 2>&1 || true
+  "$OPEN_CMD" "https://www.google.com/search?q=$encoded" >/dev/null 2>&1 || true
 fi
 
