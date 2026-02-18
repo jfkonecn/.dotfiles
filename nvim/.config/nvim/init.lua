@@ -148,7 +148,9 @@ require("lazy").setup({
 			vim.keymap.set("i", "<C-a>", 'copilot#Accept("\\<CR>")', {
 				expr = true,
 				replace_keycodes = false,
+				desc = "Copilot Accept",
 			})
+
 			vim.g.copilot_no_tab_map = true
 		end,
 	},
