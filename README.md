@@ -3,7 +3,6 @@
 ## Installation
 
 1. Install the following
-
    - zsh
    - nvim
    - tmux
@@ -25,6 +24,16 @@
 
    ```sh
    npm install -g yarn
+   ```
+
+   - Install magick_cli for image preview in terminal
+
+   ```sh
+   # For ubuntu
+   sudo apt install imagemagick
+
+   # For mac
+   brew install imagemagick
    ```
 
 2. Clone in your home directory
