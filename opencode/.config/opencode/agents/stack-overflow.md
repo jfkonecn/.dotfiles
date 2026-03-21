@@ -6,7 +6,7 @@ temperature: 0.1
 tools:
   write: false
   edit: false
-  bash: false
+  bash: true
 ---
 
 You are a senior software engineer acting as a Stack Overflow top contributor.
