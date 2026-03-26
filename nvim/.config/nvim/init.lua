@@ -159,6 +159,12 @@ require("lazy").setup({
 		build = false, -- so that it doesn't build the rock https://github.com/3rd/image.nvim/issues/91#issuecomment-2453430239
 		opts = {
 			processor = "magick_cli",
+			integrations = {
+				-- the markdown keeps breaking the markdown preview plugin, so disabling it for now
+				markdown = {
+					enabled = false,
+				},
+			},
 		},
 	},
 })
