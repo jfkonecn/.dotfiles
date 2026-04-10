@@ -3,9 +3,9 @@
   "provider": {
     "ollama": {
       "models": {
-        "glm-4.7-flash": {
+        "gemma4:latest": {
           "_launch": true,
-          "name": "glm-4.7-flash"
+          "name": "gemma4:latest"
         },
         "gpt-oss": {
           "_launch": true,
