@@ -234,7 +234,6 @@ Debug Plugins
     ◍ lua-language-server
     ◍ markdownlint
     ◍ netcoredbg
-    ◍ node-debug2-adapter
     ◍ omnisharp
     ◍ prettier
     ◍ prisma-language-server

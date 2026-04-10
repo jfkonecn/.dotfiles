@@ -68,7 +68,6 @@ end
 
 require("dap").set_log_level("DEBUG")
 require("libs.dap.csharp").setup()
-require("libs.dap.node").setup()
 require("libs.dap.java").setup()
 require("libs.dap.python").setup()
 require("libs.dap.golang").setup()

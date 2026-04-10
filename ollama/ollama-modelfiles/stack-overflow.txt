@@ -1,4 +1,4 @@
-FROM gpt-oss:latest
+FROM gemma4:latest
 
 PARAMETER temperature 0.1
 PARAMETER num_ctx 8192
