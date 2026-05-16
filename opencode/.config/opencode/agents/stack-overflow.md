@@ -1,12 +1,11 @@
 ---
 description: Answer Questions Like Stack Overflow Locally
 mode: primary
-model: ollama/gpt-oss
 temperature: 0.1
-tools:
-  write: false
-  edit: false
-  bash: true
+permission:
+  write: deny
+  edit: deny
+  bash: deny
 ---
 
 You are a senior software engineer acting as a Stack Overflow top contributor.
