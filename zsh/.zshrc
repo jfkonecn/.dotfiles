@@ -188,7 +188,8 @@ unset __conda_setup
 
 alias ai='ollama run llama3'
 
-alias format-json='jq '.' --color-output'
+alias format-json='jq '.''
+alias format-json-color='jq '.' --color-output'
 alias search-json='jq '.' --color-output | less -NFIRX'
 alias find-string-json="$HOME/.local/scripts/find-string-json.sh $1"
 alias fix-text="$HOME/.local/scripts/fix-text.sh $1"
