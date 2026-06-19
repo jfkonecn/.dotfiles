@@ -191,6 +191,51 @@ alias ai='ollama run llama3'
 alias format-json='jq '.''
 alias format-json-color='jq '.' --color-output'
 alias search-json='jq '.' --color-output | less -NFIRX'
+#alias search-json-paths='jq -r '\''paths(scalars) as $p | "\($p | map(tostring) | join(".")) = \(getpath($p))"'\'' | less -NFIRX'
+alias search-json-paths='jq -r '\''
+  def colors: [
+    "\u001b[36m",
+    "\u001b[34m",
+    "\u001b[35m",
+    "\u001b[33m",
+    "\u001b[32m",
+    "\u001b[31m"
+  ];
+
+  def reset: "\u001b[0m";
+
+  def color_segment($i; $s):
+    colors as $colors
+    | $colors[($i % ($colors | length))] + $s + reset;
+
+  def pathfmt:
+    . as $path
+    | reduce range(0; ($path | length)) as $i ("";
+        ($path | getpath([$i])) as $part
+        | . + (
+          if ($part | type) == "number" then
+            color_segment($i; "[\($part)]")
+          else
+            if . == "" then
+              color_segment($i; ($part | tostring))
+            else
+              "." + color_segment($i; ($part | tostring))
+            end
+          end
+        )
+      );
+
+  def colorval:
+    if type == "string" then "\u001b[32m\"\(.)\"\u001b[0m"
+    elif type == "number" then "\u001b[33m\(.)\u001b[0m"
+    elif type == "boolean" then "\u001b[35m\(.)\u001b[0m"
+    elif type == "null" then "\u001b[2mnull\u001b[0m"
+    else tostring
+    end;
+
+  paths(scalars) as $p
+  | "\($p | pathfmt) = \((getpath($p)) | colorval)"
+'\'' | less -NFIRX'
 alias find-string-json="$HOME/.local/scripts/find-string-json.sh $1"
 alias fix-text="$HOME/.local/scripts/fix-text.sh $1"
 alias ralph-once="$HOME/.local/scripts/ralph-once.sh $1"
