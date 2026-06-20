@@ -268,3 +268,5 @@ fi
 alias gcfzf='git checkout $(git branch | fzf)'
 
 [[ ! -f "$HOME/extends.sh" ]] || source "$HOME/extends.sh"
+
+export SYSTEMD_EDITOR=vim

@@ -5,11 +5,7 @@
       "models": {
         "gemma4:latest": {
           "_launch": true,
-          "name": "gemma4:26b",
-          "limit": {
-            "context": 256000,
-            "output": 65536
-          }
+          "name": "gemma4:26b"
         },
         "gpt-oss": {
           "_launch": true,
