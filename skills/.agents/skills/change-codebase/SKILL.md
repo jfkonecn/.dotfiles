@@ -1,6 +1,6 @@
 ---
 name: unit-operations
-description: Make scoped changes to an existing codebase through a required six-phase workflow. Use when Codex is asked to modify, fix, refactor, extend, or test existing code and should decompose the request into unit operations, search for reusable functions/types/classes, add editable Phase 2 source-code notes, stub functions/types/tests, implement changes, report deviations, and complete a final user review.
+description: ONLY USE THIS SKILL IF THE USER TELLS YOU TO. Make scoped changes to an existing codebase through a required six-phase workflow.
 ---
 
 # Change Codebase
