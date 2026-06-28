@@ -1,0 +1,4 @@
+interface:
+  display_name: "Change Codebase"
+  short_description: "Unit-operation codebase change workflow"
+  default_prompt: "Use $change-codebase to make a phased change to an existing codebase."
