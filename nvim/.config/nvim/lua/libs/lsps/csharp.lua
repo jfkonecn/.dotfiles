@@ -1,9 +1,11 @@
 local utils = require("libs.utils")
 local lsps_path = utils.concat_paths(utils.mason_path, "packages")
+local lspconfig_utils = require("lspconfig.util")
 
 require("lspconfig").omnisharp.setup({
 	-- cmd = { "dotnet", "./lsps/omnisharp/OmniSharp.dll" },
 	cmd = { "dotnet", utils.concat_paths(lsps_path, "omnisharp", "libexec", "OmniSharp.dll") },
+	root_dir = lspconfig_utils.root_pattern("*.sln", "*.csproj", "Assets", "Packages", "ProjectSettings", ".git"),
 
 	-- https://github.com/OmniSharp/omnisharp-roslyn/wiki/Configuration-Options
 	settings = {
@@ -22,21 +24,21 @@ require("lspconfig").omnisharp.setup({
 			-- for projects that are relevant to code that is being edited. With this
 			-- setting enabled OmniSharp may load fewer projects and may thus display
 			-- incomplete reference lists for symbols.
-			LoadProjectsOnDemand = nil,
+			LoadProjectsOnDemand = false,
 		},
 		RoslynExtensionsOptions = {
 			-- Enables support for roslyn analyzers, code fixes and rulesets.
-			EnableAnalyzersSupport = nil,
+			EnableAnalyzersSupport = true,
 			-- Enables support for showing unimported types and unimported extension
 			-- methods in completion lists. When committed, the appropriate using
 			-- directive will be added at the top of the current file. This option can
 			-- have a negative impact on initial completion responsiveness,
 			-- particularly for the first few completion sessions after opening a
 			-- solution.
-			EnableImportCompletion = nil,
+			EnableImportCompletion = true,
 			-- Only run analyzers against open files when 'enableRoslynAnalyzers' is
 			-- true
-			AnalyzeOpenDocumentsOnly = nil,
+			AnalyzeOpenDocumentsOnly = true,
 			InlayHintsOptions = {
 				EnableForParameters = true,
 				ForLiteralParameters = true,
