@@ -32,6 +32,7 @@ require("lazy").setup({
 
 	-- lsp manager
 	"williamboman/mason.nvim",
+	"Hoffs/omnisharp-extended-lsp.nvim",
 
 	-- status line
 	--"beauwilliams/statusline.lua",

@@ -47,6 +47,7 @@ return {
 				local file_extension = vim.fn.expand("%:e")
 
 				local bufnr = args.buf
+				local client = vim.lsp.get_client_by_id(args.data.client_id)
 				vim.api.nvim_set_option_value("omnifunc", "v:lua.vim.lsp.omnifunc", { buf = bufnr })
 
 				-- zed mappings
@@ -54,9 +55,24 @@ return {
 				-- Mappings.
 				-- See `:help vim.lsp.*` for documentation on any of the below functions
 				local bufopts = { noremap = true, silent = true, buffer = bufnr }
-				vim.keymap.set("n", "gd", telescopeBuiltin.lsp_definitions, bufopts)
+				local lsp_definitions = telescopeBuiltin.lsp_definitions
+				local lsp_type_definitions = telescopeBuiltin.lsp_type_definitions
+
+				if client and client.name == "omnisharp" then
+					local omnisharp_extended_ok, omnisharp_extended = pcall(require, "omnisharp_extended")
+
+					if omnisharp_extended_ok then
+						lsp_definitions = omnisharp_extended.telescope_lsp_definition
+
+						if type(omnisharp_extended.telescope_lsp_type_definition) == "function" then
+							lsp_type_definitions = omnisharp_extended.telescope_lsp_type_definition
+						end
+					end
+				end
+
+				vim.keymap.set("n", "gd", lsp_definitions, bufopts)
 				vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts)
-				vim.keymap.set("n", "gy", telescopeBuiltin.lsp_type_definitions, bufopts)
+				vim.keymap.set("n", "gy", lsp_type_definitions, bufopts)
 				vim.keymap.set("n", "gI", telescopeBuiltin.lsp_implementations, bufopts)
 				vim.keymap.set("n", "cd", vim.lsp.buf.rename, bufopts)
 				vim.keymap.set("n", "gh", vim.lsp.buf.hover, bufopts)

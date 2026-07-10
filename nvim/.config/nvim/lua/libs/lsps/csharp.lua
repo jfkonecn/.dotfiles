@@ -1,11 +1,18 @@
 local utils = require("libs.utils")
 local lsps_path = utils.concat_paths(utils.mason_path, "packages")
 local lspconfig_utils = require("lspconfig.util")
+local omnisharp_extended_ok, omnisharp_extended = pcall(require, "omnisharp_extended")
+local handlers = {}
+
+if omnisharp_extended_ok then
+	handlers["textDocument/definition"] = omnisharp_extended.handler
+end
 
 require("lspconfig").omnisharp.setup({
 	-- cmd = { "dotnet", "./lsps/omnisharp/OmniSharp.dll" },
 	cmd = { "dotnet", utils.concat_paths(lsps_path, "omnisharp", "libexec", "OmniSharp.dll") },
 	root_dir = lspconfig_utils.root_pattern("*.sln", "*.csproj", "Assets", "Packages", "ProjectSettings", ".git"),
+	handlers = handlers,
 
 	-- https://github.com/OmniSharp/omnisharp-roslyn/wiki/Configuration-Options
 	settings = {
@@ -36,6 +43,7 @@ require("lspconfig").omnisharp.setup({
 			-- particularly for the first few completion sessions after opening a
 			-- solution.
 			EnableImportCompletion = true,
+			EnableDecompilationSupport = true,
 			-- Only run analyzers against open files when 'enableRoslynAnalyzers' is
 			-- true
 			AnalyzeOpenDocumentsOnly = true,
