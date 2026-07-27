@@ -21,4 +21,12 @@ parsers.roc = {
 		files = { "src/parser.c", "src/scanner.c" },
 	},
 }
-require("lspconfig").roc_ls.setup({})
+
+vim.lsp.config("roc_ls", {
+	cmd = { "roc", "experimental-lsp" },
+	filetypes = { "roc" },
+	root_markers = { ".git" },
+})
+vim.lsp.enable("roc_ls")
+
+--require("lspconfig").roc_ls.setup({})

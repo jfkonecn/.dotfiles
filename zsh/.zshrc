@@ -241,6 +241,7 @@ alias find-string-json="$HOME/.local/scripts/find-string-json.sh $1"
 alias fix-text="$HOME/.local/scripts/fix-text.sh $1"
 alias ralph-once="$HOME/.local/scripts/ralph-once.sh $1"
 alias codex-ollama="ollama launch codex"
+alias large-folders="du -h --max-depth=1 | sort -h"
 
 
 # roc programming language
