@@ -34,6 +34,7 @@ require("nvim-treesitter.configs").setup({
 		"fsharp",
 		"terraform",
 		"perl",
+		"templ",
 	},
 })
 

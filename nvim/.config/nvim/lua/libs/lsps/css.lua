@@ -1,7 +1,20 @@
---Enable (broadcasting) snippet capability for completion
-local cssCapabilities = vim.lsp.protocol.make_client_capabilities()
-cssCapabilities.textDocument.completion.completionItem.snippetSupport = true
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-require("lspconfig").cssls.setup({
-	capabilities = cssCapabilities,
+vim.lsp.config("cssls", {
+	capabilities = capabilities,
 })
+
+vim.lsp.config("css_variables", {
+	settings = {
+		cssVariables = {
+			lookupFiles = {
+				"**/*.css",
+			},
+		},
+	},
+})
+
+vim.lsp.enable("cssmodules_ls")
+vim.lsp.enable("css_variables")
+vim.lsp.enable("cssls")
