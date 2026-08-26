@@ -192,3 +192,24 @@ local zig_format = h.make_builtin({
 	factory = h.formatter_factory,
 })
 null_ls.register(zig_format)
+
+local templ_format = h.make_builtin({
+	name = "templ_fmt",
+	meta = {
+		url = "https://templ.guide/developer-tools/cli",
+		description = "Formats templ files using templ fmt.",
+		notes = {},
+	},
+	method = FORMATTING,
+	filetypes = { "templ" },
+	generator_opts = {
+		command = "templ",
+		args = {
+			"fmt",
+		},
+		to_stdin = true,
+	},
+	factory = h.formatter_factory,
+})
+
+null_ls.register(templ_format)
