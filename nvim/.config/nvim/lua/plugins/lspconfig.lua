@@ -10,6 +10,7 @@ return {
 		require("libs.lsps.csharp")
 		require("libs.lsps.lua")
 		require("libs.lsps.typescript")
+		require("libs.lsps.biome")
 		require("libs.lsps.c")
 		require("libs.lsps.rust")
 		require("libs.lsps.snippets")

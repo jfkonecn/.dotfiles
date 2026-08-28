@@ -40,6 +40,7 @@ require("mason-tool-installer").setup({
 		"kotlin-language-server",
 		"ktlint",
 		"basedpyright",
+		"biome",
 		"asm-lsp",
 		"goimports",
 		"golangci-lint",

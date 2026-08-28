@@ -18,6 +18,48 @@
 local null_ls = require("null-ls")
 local cspell = require("cspell")
 
+local biome_config_files = { "biome.json", "biome.jsonc", "rome.json" }
+local prettier_config_files = {
+	".prettierrc",
+	".prettierrc.json",
+	".prettierrc.yml",
+	".prettierrc.yaml",
+	".prettierrc.json5",
+	".prettierrc.js",
+	".prettierrc.cjs",
+	".prettierrc.mjs",
+	".prettierrc.toml",
+	"prettier.config.js",
+	"prettier.config.cjs",
+	"prettier.config.mjs",
+	"prettier.config.ts",
+}
+local eslint_config_files = {
+	".eslintrc",
+	".eslintrc.json",
+	".eslintrc.yml",
+	".eslintrc.yaml",
+	".eslintrc.js",
+	".eslintrc.cjs",
+	".eslintrc.mjs",
+	"eslint.config.js",
+	"eslint.config.cjs",
+	"eslint.config.mjs",
+	"eslint.config.ts",
+}
+
+local has_biome_config = function(utils)
+	return utils.root_has_file(biome_config_files)
+end
+
+local has_prettier_config = function(utils)
+	return utils.root_has_file(prettier_config_files)
+end
+
+local has_eslint_config = function(utils)
+	return utils.root_has_file(eslint_config_files)
+end
+
 local formatOnSave = true
 
 local toggleFormatOnSave = function()
@@ -52,10 +94,14 @@ null_ls.setup({
 		----return utils.root_has_file({ ".eslint", ".eslintrc.json", ".eslintrc.js" })
 		----end,
 		--}),
+		null_ls.builtins.formatting.biome.with({
+			condition = function(utils)
+				return has_biome_config(utils)
+			end,
+		}),
 		null_ls.builtins.formatting.prettier.with({
 			condition = function(utils)
-				--return utils.root_has_file({ ".prettierrc", ".prettierrc.json", ".prettierrc.mjs" })
-				return true
+				return (not has_biome_config(utils)) and has_prettier_config(utils)
 			end,
 			extra_filetypes = { "astro" },
 		}),
@@ -73,9 +119,15 @@ null_ls.setup({
 		}),
 		require("none-ls.diagnostics.cpplint"),
 		require("none-ls.code_actions.eslint").with({
+			condition = function(utils)
+				return (not has_biome_config(utils)) and has_eslint_config(utils)
+			end,
 			extra_filetypes = { "astro" },
 		}),
 		require("none-ls.diagnostics.eslint").with({
+			condition = function(utils)
+				return (not has_biome_config(utils)) and has_eslint_config(utils)
+			end,
 			extra_filetypes = { "astro" },
 		}),
 		null_ls.builtins.formatting.google_java_format,
