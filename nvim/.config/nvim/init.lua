@@ -168,6 +168,10 @@ require("lazy").setup({
 			},
 		},
 	},
+	{
+		"hyperpuncher/datastar-lsp",
+		opts = {},
+	},
 })
 
 require("libs.mason")
