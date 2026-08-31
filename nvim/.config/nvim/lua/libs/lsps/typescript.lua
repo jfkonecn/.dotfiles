@@ -1,4 +1,4 @@
-require("lspconfig").ts_ls.setup({
+vim.lsp.config("ts_ls", {
 	init_options = {
 		preferences = {
 			includeInlayParameterNameHints = "all",

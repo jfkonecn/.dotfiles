@@ -1,1 +1,1 @@
-require("lspconfig").asm_lsp.setup({})
+vim.lsp.config("asm_lsp", {})

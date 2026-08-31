@@ -1,5 +1,5 @@
 -- tailwindcss
-require("lspconfig").tailwindcss.setup({
+vim.lsp.config("tailwindcss", {
 	-- https://www.reddit.com/r/neovim/comments/yukgxy/rust_yew_tailwindcss_intellisense/
 	filetypes = {
 		"css",
@@ -26,7 +26,7 @@ require("lspconfig").tailwindcss.setup({
 			rust = "html",
 		},
 	},
-	root_dir = require("lspconfig").util.root_pattern(
+	root_dir = require("lspconfig.util").root_pattern(
 		"tailwind.config.js",
 		"tailwind.config.ts",
 		"postcss.config.js",

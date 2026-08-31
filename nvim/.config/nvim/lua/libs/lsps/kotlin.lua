@@ -1,1 +1,1 @@
-require("lspconfig").kotlin_language_server.setup({})
+vim.lsp.config("kotlin_language_server", {})

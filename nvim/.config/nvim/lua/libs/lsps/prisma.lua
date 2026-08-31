@@ -1,1 +1,1 @@
-require("lspconfig").prismals.setup({})
+vim.lsp.config("prismals", {})

@@ -1,1 +1,1 @@
-require("lspconfig").lemminx.setup({})
+vim.lsp.config("lemminx", {})

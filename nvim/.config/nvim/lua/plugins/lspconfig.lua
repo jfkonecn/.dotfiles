@@ -36,6 +36,14 @@ return {
 		require("libs.lsps.templ")
 		require("libs.lsps.perl")
 
+		for _, server in ipairs({
+			"asm_lsp", "astro", "basedpyright", "clangd", "cmake", "docker_compose_language_service", "dockerls",
+			"fsautocomplete", "gopls", "html", "kotlin_language_server", "lemminx", "ltex", "lua_ls", "omnisharp",
+			"prismals", "rust_analyzer", "tailwindcss", "terraformls", "ts_ls", "zls",
+		}) do
+			vim.lsp.enable(server)
+		end
+
 		vim.api.nvim_create_user_command("EnableInlayHints", ":lua vim.lsp.inlay_hint.enable(true)<CR>", {})
 		vim.api.nvim_create_user_command("DisableInlayHints", ":lua vim.lsp.inlay_hint.enable(false)<CR>", {})
 		vim.api.nvim_create_user_command(

@@ -13,9 +13,7 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
 })
 
 -- add roc tree-sitter
-local parsers = require("nvim-treesitter.parsers").get_parser_configs()
-
-parsers.roc = {
+require("nvim-treesitter.parsers").roc = {
 	install_info = {
 		url = "https://github.com/faldor20/tree-sitter-roc",
 		files = { "src/parser.c", "src/scanner.c" },

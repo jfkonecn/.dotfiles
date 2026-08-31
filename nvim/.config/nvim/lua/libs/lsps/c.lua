@@ -1,5 +1,5 @@
-require("lspconfig").clangd.setup({})
+vim.lsp.config("clangd", {})
 
-require("lspconfig").cmake.setup({
+vim.lsp.config("cmake", {
 	filetypes = { "cmake", "CMakeLists.txt" },
 })

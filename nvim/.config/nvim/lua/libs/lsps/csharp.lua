@@ -8,7 +8,7 @@ if omnisharp_extended_ok then
 	handlers["textDocument/definition"] = omnisharp_extended.handler
 end
 
-require("lspconfig").omnisharp.setup({
+vim.lsp.config("omnisharp", {
 	-- cmd = { "dotnet", "./lsps/omnisharp/OmniSharp.dll" },
 	cmd = { "dotnet", utils.concat_paths(lsps_path, "omnisharp", "libexec", "OmniSharp.dll") },
 	root_dir = lspconfig_utils.root_pattern("*.sln", "*.csproj", "Assets", "Packages", "ProjectSettings", ".git"),

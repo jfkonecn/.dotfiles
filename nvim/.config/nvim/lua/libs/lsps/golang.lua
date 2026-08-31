@@ -1,6 +1,6 @@
 --require("lspconfig").golangci_lint_ls.setup({})
 -- https://github.com/golang/tools/blob/master/gopls/doc/settings.md
-require("lspconfig").gopls.setup({
+vim.lsp.config("gopls", {
 	settings = {
 		gopls = {
 			analyses = {

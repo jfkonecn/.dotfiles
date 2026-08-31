@@ -1,4 +1,4 @@
-require("lspconfig").rust_analyzer.setup({
+vim.lsp.config("rust_analyzer", {
 	settings = {
 		--https://rust-analyzer.github.io/manual.html#configuration
 		["rust-analyzer"] = {

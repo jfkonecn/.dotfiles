@@ -1,4 +1,4 @@
-require("lspconfig").ltex.setup({
+vim.lsp.config("ltex", {
 	filetypes = {
 		"bib",
 		"gitcommit",
