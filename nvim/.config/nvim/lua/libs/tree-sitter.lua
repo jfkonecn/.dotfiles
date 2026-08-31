@@ -1,7 +1,6 @@
-local treesitter = require("nvim-treesitter")
-
-treesitter.setup({})
-treesitter.install({
+require("nvim-treesitter.configs").setup({
+	highlight = { enable = true },
+	ensure_installed = {
 		"c",
 		"cmake",
 		"cpp",
@@ -20,7 +19,6 @@ treesitter.install({
 		"rust",
 		"tsx",
 		"typescript",
-		"vim",
 		"python",
 		"astro",
 		"sql",
@@ -36,18 +34,17 @@ treesitter.install({
 		"terraform",
 		"perl",
 		"templ",
+	},
 })
 
-vim.api.nvim_create_autocmd("FileType", {
-	callback = function()
-		pcall(vim.treesitter.start)
-	end,
+require("treesitter-context").setup({
+	enable = true,
 })
 
-require("treesitter-context").setup({})
+pcall(vim.treesitter.query.set, "markdown", "injections", "")
+pcall(vim.treesitter.query.set, "markdown_inline", "injections", "")
 
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldmethod = "manual"
 -- https://neovim.io/doc/user/fold.html#fold-commands
 -- za to unfold
 vim.cmd([[ set nofoldenable]])
