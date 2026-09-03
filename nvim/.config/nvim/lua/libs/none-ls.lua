@@ -101,7 +101,7 @@ null_ls.setup({
 		}),
 		null_ls.builtins.formatting.prettier.with({
 			condition = function(utils)
-				return (not has_biome_config(utils)) and has_prettier_config(utils)
+				return not has_biome_config(utils)
 			end,
 			extra_filetypes = { "astro" },
 		}),
