@@ -1,6 +1,6 @@
 # Hosted Functions
 
-A platform header's `hosted` block names Zig exports that Roc code may call. Its mapping is the single contract:
+A platform header's `hosted` block maps arbitrary linker-symbol strings to effectful Roc declarations. The mapping, rather than a naming convention, is the contract:
 
 ```roc
 hosted {
@@ -17,7 +17,7 @@ log! : Str => {}
 read! : {} => Str
 ```
 
-After regenerating `roc_platform_abi.zig`, implement the generated declarations by their exact exported name, argument order, result type, and `callconv(.c)`. Do not derive a Zig signature from the Roc spelling.
+After regenerating `roc_platform_abi.zig`, implement each generated declaration by its exact exported name, argument order, result type, and `callconv(.c)`. Generated signatures use the natural target C ABI, including target-specific aggregate, vector, and indirect-result behavior. Do not derive a signature, layout, hidden argument, or result convention from Roc syntax.
 
 ```zig
 const abi = @import("roc_platform_abi.zig");
@@ -32,7 +32,7 @@ export fn roc_cli_log(message: abi.RocStr) callconv(.c) void {
 }
 ```
 
-Roc transfers ownership of every refcounted hosted argument. On every return path, release each owned argument once with the generated type-specific helper, or move its ownership into retained host state or the returned value. A value retained by the host needs an explicit generated retain/incref first; release it when that state is destroyed.
+Roc transfers ownership of every refcounted hosted argument. On every return path, release each owned argument once with the generated type-specific helper, or move its ownership into retained host state or the returned value. A value retained by the host needs an explicit generated retain/incref first; release it when that state is destroyed. Consume or copy input before releasing it, and settle it before returning either a success or error result. [`basic-webserver/src/stdio.rs`](https://github.com/roc-lang/basic-webserver/blob/main/src/stdio.rs) demonstrates this error-safe `RocStr` pattern.
 
 Use the generated helper named in the hosted declaration's ownership comment. Containers with refcounted elements need their generated recursive helper, not the container's shallow release:
 
@@ -54,4 +54,4 @@ For the reverse direction, `provides` maps a Roc wrapper to a generated declarat
 provides { "roc_main": main_for_host! }
 ```
 
-The host calls `abi.roc_main(...)` and settles its owned result after use. This keeps Zig-to-Roc entrypoints distinct from Roc-to-Zig hosted exports.
+The host calls the generated `provides` declaration and settles a refcounted result after use. This keeps host-to-Roc entrypoints distinct from Roc-to-host hosted exports.
