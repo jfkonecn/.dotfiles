@@ -36,7 +36,26 @@ do
         continue
     fi
 
+    if [[ $folder == skills ]]; then
+        # Unfold installations made before the personal skills directory existed.
+        if [[ -L $HOME/.agents && $HOME/.agents -ef "$DOTFILES/skills/.agents" ]]; then
+            stow -D -t "$HOME" "${STOW_IGNORE_ARGS[@]}" "$folder"
+        fi
+
+        skills_target="$HOME/.agents/skills/me"
+        mkdir -p "${skills_target%/*}"
+        if [[ -e $skills_target && ! -L $skills_target ]]; then
+            if ! rmdir "$skills_target"; then
+                printf '%s\n' "Cannot replace non-empty $skills_target" >&2
+                exit 1
+            fi
+        fi
+
+        ln -sfn "$DOTFILES/skills" "$skills_target"
+        continue
+    fi
+
     echo "stow $folder"
-    stow "${STOW_IGNORE_ARGS[@]}" "$folder"
+    stow -t "$HOME" "${STOW_IGNORE_ARGS[@]}" "$folder"
 done
 popd > /dev/null
