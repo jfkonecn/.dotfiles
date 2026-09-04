@@ -5,13 +5,20 @@ description: Write, edit, or debug Roc for the rewritten nightly compiler. Use f
 
 # Roc Nightly Writing
 
-Target the rewritten nightly compiler, not documented alpha4/old-Roc APIs.
+Target only the rewritten nightly compiler. The installed nightly, project sources, and project conventions are authoritative.
 
 1. Inspect the project before editing: read its root instructions, `.roc-version` when present, app/package/platform headers, imports, and nearby Roc. Run `roc version`; use `roc --help` and subcommand help to confirm available commands and current syntax. Treat the project and installed compiler as the API source of truth.
 2. Make the smallest idiomatic change consistent with the local nightly and project conventions.
 3. Verify at the narrowest useful scope: format changed Roc with `roc fmt`; run affected `expect`s with `roc test`; run or build the changed app with `roc <file>` or the project command. Use `roc repl` for isolated expressions or a minimal reproduction. Report any unavailable command or environment blocker.
 
-Read `reference/tooling.md` before choosing Roc commands, diagnosing compiler-version/API drift, or using the REPL.
-Read `reference/syntax-and-control-flow.md` when writing functions, blocks, mutation, conditionals, loops, matches, tests, or debugging statements.
-Read `reference/data-and-errors.md` when modeling records, lists, tags, `Try`, recoverable errors, or `?` propagation.
-Read `reference/types-and-apps.md` when adding annotations, generic constraints, nominal types, imports, or app/package/platform declarations.
+The nightly tutorial is split into these focused references. Read the applicable files before relying on an unfamiliar nightly feature:
+
+- `reference/introduction.md`: compiler maturity, source-of-truth, and support guidance.
+- `reference/hello-world.md`: nightly installation check, headerless apps, and running `main.roc`.
+- `reference/repl.md`: interactive and piped REPL use, stdout/stderr behavior, and plain diagnostics.
+- `reference/main-and-functions.md`: entrypoints, effects, constants, and interpolation.
+- `reference/iteration-and-blocks.md`: `expect`, formatting, `for`, `fold`, blocks, `return`, `crash`, and `dbg`.
+- `reference/conditionals-and-collections.md`: `if`, records, lists, methods, patterns, tags, `Try`, and `?`.
+- `reference/types.md`: inference, annotations, parameterized and function types, generics, and nominal types.
+- `reference/dependencies-and-platforms.md`: app headers, dependencies, and the platform boundary.
+- `reference/additional-resources.md`: compiler-source and community reference material.
