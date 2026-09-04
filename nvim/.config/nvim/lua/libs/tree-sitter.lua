@@ -1,6 +1,4 @@
-require("nvim-treesitter.configs").setup({
-	highlight = { enable = true },
-	ensure_installed = {
+local languages = {
 		"c",
 		"cmake",
 		"cpp",
@@ -34,7 +32,16 @@ require("nvim-treesitter.configs").setup({
 		"terraform",
 		"perl",
 		"templ",
-	},
+}
+
+require("nvim-treesitter").setup({})
+require("nvim-treesitter").install(languages)
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = languages,
+	callback = function()
+		pcall(vim.treesitter.start)
+	end,
 })
 
 require("treesitter-context").setup({
