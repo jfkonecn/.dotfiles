@@ -3,9 +3,9 @@
   "provider": {
     "ollama": {
       "models": {
-        "gemma4:latest": {
+        "gemma4:e4b": {
           "_launch": true,
-          "name": "gemma4:26b"
+          "name": "gemma4:e4b"
         },
         "gpt-oss": {
           "_launch": true,
@@ -23,9 +23,7 @@
         "reasoningEffort": "medium",
         "reasoningSummary": "auto",
         "textVerbosity": "medium",
-        "include": [
-          "reasoning.encrypted_content"
-        ],
+        "include": ["reasoning.encrypted_content"],
         "store": false
       },
       "models": {
@@ -36,13 +34,8 @@
             "output": 128000
           },
           "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text", "image"],
+            "output": ["text"]
           },
           "variants": {
             "none": {
@@ -79,13 +72,8 @@
             "output": 128000
           },
           "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text", "image"],
+            "output": ["text"]
           },
           "variants": {
             "low": {
@@ -117,13 +105,8 @@
             "output": 128000
           },
           "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text", "image"],
+            "output": ["text"]
           },
           "variants": {
             "low": {
@@ -155,13 +138,8 @@
             "output": 128000
           },
           "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text", "image"],
+            "output": ["text"]
           },
           "variants": {
             "low": {
@@ -188,13 +166,8 @@
             "output": 128000
           },
           "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text", "image"],
+            "output": ["text"]
           },
           "variants": {
             "medium": {
@@ -216,13 +189,8 @@
             "output": 128000
           },
           "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text", "image"],
+            "output": ["text"]
           },
           "variants": {
             "none": {
@@ -250,7 +218,5 @@
       }
     }
   },
-  "plugin": [
-    "opencode-openai-codex-auth"
-  ]
+  "plugin": ["opencode-openai-codex-auth"]
 }
